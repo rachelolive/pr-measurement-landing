@@ -259,6 +259,34 @@ code, pre, .mono {
 }
 
 /* ============================================================
+   LAYOUT WRAPPER
+   ============================================================ */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* ============================================================
+   GAP SECTION - Override for proper grid layout
+   ============================================================ */
+.gap-inner {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  max-width: 100%;
+  padding: 0;
+}
+
+.gap-copy {
+  min-width: 0;
+}
+
+.orbit-wrap {
+  justify-self: center;
+}
+/* ============================================================
    ORBIT SECTION - Pain-point visualization
    ============================================================ */
 .gap-section {
