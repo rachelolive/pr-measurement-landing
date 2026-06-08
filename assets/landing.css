@@ -110,63 +110,27 @@
 .hero-cta { display: flex; gap: 12px; align-items: center; margin-top: 30px; flex-wrap: wrap; }
 
 /* hero visual â€” boardroom report card over gradient */
-.hero-visual { position: relative; justify-self: end; width: 100%; max-width: 460px; aspect-ratio: 0.92; }
-.hero-card {
-  position: absolute; inset: 0;
-  background: var(--celestial-gradient); border-radius: var(--radius-xl);
-  overflow: hidden; box-shadow: var(--shadow-xl);
+.hero-visual { 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  min-height: 500px;
 }
-.hero-card::after {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at 75% 15%, rgba(255,255,255,.28), transparent 55%);
+
+.hero-pyramid { 
+  width: 100%; 
+  height: auto; 
+  max-width: 600px;
+  object-fit: contain;
 }
-.hero-pyramid { position: absolute; top: 22px; left: 22px; width: 46px; z-index: 2; }
-.hero-report {
-  position: absolute; left: 7%; right: 7%; top: 13%;
-  background: rgba(255,255,255,.96); border-radius: 16px;
-  box-shadow: 0 30px 60px rgba(47,47,47,.22);
-  padding: 18px 18px 16px; z-index: 3;
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-3xl);
+  align-items: center;
 }
-.hero-report .rep-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.hero-report .rep-head .tag {
-  font-family: var(--font-display); font-weight: 500; font-size: 10px; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--fg-3);
-}
-.hero-report .rep-head .live {
-  margin-left: auto; display: inline-flex; align-items: center; gap: 5px;
-  font-family: var(--font-display); font-size: 10px; font-weight: 500; color: var(--success);
-}
-.hero-report .rep-head .live .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
-.hero-report .rep-score { display: flex; align-items: flex-end; gap: 10px; }
-.hero-report .rep-score .num {
-  font-family: var(--font-display); font-weight: 700; font-size: 52px; line-height: .9;
-  letter-spacing: -0.04em; color: var(--warm-black);
-}
-.hero-report .rep-score .delta {
-  font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--success);
-  display: inline-flex; align-items: center; gap: 3px; margin-bottom: 8px;
-}
-.hero-report .rep-label {
-  font-family: var(--font-display); font-weight: 400; font-size: 12px; color: var(--fg-2); margin-top: 4px;
-}
-.hero-report .rep-spark { display: flex; align-items: flex-end; gap: 4px; height: 46px; margin-top: 14px; }
-.hero-report .rep-spark span {
-  flex: 1; border-radius: 3px 3px 0 0;
-  background: linear-gradient(180deg, var(--neptune), var(--digitalis));
-  opacity: .85;
-}
-.hero-floats {
-  position: absolute; left: 6%; right: 10%; bottom: 9%; z-index: 3;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.hero-chip {
-  display: flex; align-items: center; gap: 9px;
-  background: rgba(245,244,238,.94); border-radius: 12px;
-  padding: 9px 12px; box-shadow: 0 12px 28px rgba(47,47,47,.14);
-  font-family: var(--font-display); font-size: 12px; font-weight: 500; color: var(--warm-black);
-}
-.hero-chip .ico { width: 15px; height: 15px; color: var(--signal-red); }
-.hero-chip .val { margin-left: auto; font-weight: 600; color: var(--neptune); }
 
 /* ---------- Social proof ---------- */
 .proof { padding: 30px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--fog); }
