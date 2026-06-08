@@ -216,27 +216,36 @@ Style: colors_and_type.css tokens
   width: 116px; display: flex; flex-direction: column; align-items: center; gap: 9px;
   cursor: default;
 }
-.node-disc {
-  width: 78px; height: 78px; border-radius: 50%;
-  background: var(--pure-white); border: 1px solid var(--border);
-  display: grid; place-items: center; color: var(--signal-red);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+.node-disc { 
+  width: 64px; 
+  height: 64px; 
+  background: white; 
+  border: 2px solid var(--border-light); 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  flex-shrink: 0;
 }
-.node-disc .ico { width: 30px; height: 30px; stroke-width: 1.75; }
-.node-label {
-  font-family: var(--font-display); font-weight: 600; font-size: 13px;
-  letter-spacing: -0.01em; color: var(--warm-black); text-align: center; line-height: 1.2;
-  transition: color var(--dur-base) var(--ease-out);
+
+.node-disc img { 
+  width: 32px; 
+  height: 32px; 
+  object-fit: contain;
 }
-.node-desc {
-  position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(6px);
-  width: 220px; padding: 13px 15px; border-radius: 14px;
-  background: var(--warm-black); color: var(--fog);
-  font-family: var(--font-display); font-weight: 300; font-size: 12.5px; line-height: 1.45;
-  text-align: center; box-shadow: var(--shadow-lg);
-  opacity: 0; pointer-events: none; z-index: 20;
-  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+
+.node-label { 
+  font-weight: 600; 
+  font-size: 12px; 
+  color: var(--dark-text);
+  margin-top: 8px;
+}
+
+.node-desc { 
+  font-size: 11px; 
+  color: var(--light-text); 
+  line-height: 1.3;
+  margin-top: 4px;
 }
 .node-desc::before {
   content: ''; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
