@@ -1,144 +1,281 @@
-/* Signal AI Brand Colors & Typography */
+/* ============================================================
+   Signal AI â€” Colors & Type tokens
+   Source: Signal Brand Guidelines 2025 V2
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors */
-  --bg-light: #F5F4EE;
-  --signal-red: #FF585D;
-  --coral: #FF585D;
-  --seafoam: #5ECCC8;
-  --sunshine: #FFB400;
-  --dark-text: #2F2F2F;
-  --light-text: #666666;
-  --border-light: #E4E2D9;
-  --border-medium: #C9C6BB;
+  /* ---- PRIMARY ----------------------------------------------- */
+  --signal-red:      #FF585D;   /* Primary brand color  - CTAs, accents */
 
-  /* Typography */
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-  --font-display: 'GT Sectra', Georgia, serif;
+  /* ---- SECONDARY --------------------------------------------- */
+  --neptune:         #6446FF;   /* Trust, creativity, innovation */
+  --digitalis:       #AF46B4;   /* Innovation, ambition, creativity */
 
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
+  /* ---- TERTIARY ---------------------------------------------- */
+  --seafoam:         #82DCBE;   /* Positive / success in charts */
+  --coral:           #FFA0A0;   /* Soft accent / negative in charts */
+  --sunshine:        #FFC864;   /* Highlights / warning in charts */
+  --orange:          #FF705A;   /* Alerts / emphasis */
+
+  /* ---- NEUTRALS ---------------------------------------------- */
+  --warm-black:      #2F2F2F;   /* Text & deep backgrounds */
+  --soft-white:      #DFCFCA;   /* Warm cream alt to white */
+  --fog:             #F5F4EE;   /* Page background */
+  --pure-white:      #FFFFFF;
+
+  /* ---- CELESTIAL GRADIENT ------------------------------------ */
+  --celestial-gradient:
+      linear-gradient(120deg, #6446FF 0%, #AF46B4 50%, #FF585D 100%);
+  --celestial-gradient-vertical:
+      linear-gradient(180deg, #6446FF 0%, #AF46B4 50%, #FF585D 100%);
+  --celestial-gradient-radial:
+      radial-gradient(circle at 30% 20%, #6446FF 0%, #AF46B4 45%, #FF585D 100%);
+
+  /* ---- TINTS (10% / 20% backgrounds) ------------------------- */
+  --signal-red-10:   #FFE7E8;
+  --neptune-10:      #E7E2FF;
+  --digitalis-10:    #F4E2F6;
+  --seafoam-10:      #E6F8F1;
+
+  /* ============================================================
+     SEMANTIC TOKENS â€” light theme (default)
+     ============================================================ */
+  --bg:              var(--fog);
+  --bg-elevated:     var(--pure-white);
+  --bg-inset:        #ECEBE4;
+  --surface-warm:    var(--soft-white);
+
+  --fg:              var(--warm-black);
+  --fg-1:            var(--warm-black);
+  --fg-2:            #5C5C5C;
+  --fg-3:            #8A8A85;
+  --fg-on-red:       var(--fog);
+  --fg-on-gradient:  var(--fog);
+
+  --border:          #E4E2D9;
+  --border-strong:   #C9C6BB;
+  --divider:         #EBE9E0;
+
+  --accent:          var(--signal-red);
+  --accent-fg:       var(--fog);
+  --accent-hover:    #F04A4F;   /* slightly darker red for hover */
+  --accent-press:    #DA3F44;
+
+  --link:            var(--neptune);
+  --focus-ring:      #6446FF;
+
+  --success:         #4FB890;   /* derived from seafoam */
+  --warning:         #E5A53A;   /* derived from sunshine */
+  --danger:          var(--signal-red);
+  --info:            var(--neptune);
+
+  /* ============================================================
+     TYPOGRAPHY
+     ============================================================
+     Brand primary: Euclid Flex (bold / medium / light)
+     Google Docs/Slides substitute: Poppins (bold / regular)
+     PowerPoint substitute: Avenir Next LT Pro
+     This stack falls back through all approved options.       */
+  --font-display:    'Euclid Flex', 'Poppins', 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:       'Euclid Flex', 'Poppins', 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:       'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* type scale (16px base, 1.25 modular scale) */
+  --t-display-1: 96px;
+  --t-display-2: 72px;
+  --t-h1:        56px;
+  --t-h2:        40px;
+  --t-h3:        28px;
+  --t-h4:        22px;
+  --t-h5:        18px;
+  --t-body-lg:   18px;
+  --t-body:      16px;
+  --t-body-sm:   14px;
+  --t-caption:   12px;
+  --t-eyebrow:   12px;
+
+  /* line heights */
+  --lh-display:  0.95;   /* tight leading for big headlines */
+  --lh-tight:    1.1;
+  --lh-snug:     1.25;
+  --lh-normal:   1.45;
+  --lh-loose:    1.65;
+
+  /* tracking â€” brand spec: headlines run at -10 (i.e. -0.01em-ish in CSS) */
+  --tracking-display: -0.03em;
+  --tracking-tight:   -0.015em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-caps:    0.08em;
+
+  /* weights */
+  --w-light:    300;
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semibold: 600;
+  --w-bold:     700;
+
+  /* ============================================================
+     SPACING / RADIUS / SHADOWS
+     ============================================================ */
+  --space-0:   0px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
+  --space-9:   96px;
+  --space-10: 128px;
+
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-2xl: 40px;
+  --radius-pill: 999px;
+
+  --shadow-xs: 0 1px 2px rgba(47,47,47,.06);
+  --shadow-sm: 0 1px 3px rgba(47,47,47,.06), 0 1px 2px rgba(47,47,47,.04);
+  --shadow-md: 0 6px 18px rgba(47,47,47,.08), 0 2px 6px rgba(47,47,47,.04);
+  --shadow-lg: 0 18px 40px rgba(47,47,47,.10), 0 4px 12px rgba(47,47,47,.04);
+  --shadow-xl: 0 28px 60px rgba(47,47,47,.14), 0 10px 24px rgba(47,47,47,.06);
+  --shadow-glow-red:     0 8px 28px rgba(255,88,93,.32);
+  --shadow-glow-neptune: 0 8px 28px rgba(100,70,255,.30);
+
+  /* easing â€” brand is "dynamic, contemporary"; favour crisp out-curves */
+  --ease-out:        cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out:     cubic-bezier(.65, 0, .35, 1);
+  --ease-spring:     cubic-bezier(.34, 1.56, .64, 1);
+  --dur-fast:        140ms;
+  --dur-base:        220ms;
+  --dur-slow:        420ms;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ============================================================
+   DARK THEME â€” warm black canvas
+   Apply via [data-theme="dark"] or .theme-dark
+   ============================================================ */
+[data-theme="dark"], .theme-dark {
+  --bg:           var(--warm-black);
+  --bg-elevated:  #3A3A3A;
+  --bg-inset:     #262626;
+  --surface-warm: #3A3733;
+
+  --fg:           var(--fog);
+  --fg-1:         var(--fog);
+  --fg-2:         #C9C6BB;
+  --fg-3:         #8A8A85;
+
+  --border:       #4A4744;
+  --border-strong:#6A6661;
+  --divider:      #3F3D3A;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   ============================================================ */
 
-body {
+html, body {
   font-family: var(--font-body);
-  background-color: var(--bg-light);
-  color: var(--dark-text);
-  line-height: 1.6;
+  font-weight: var(--w-light);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
+/* Headlines â€” Euclid Flex Bold, sentence case, tight leading, -10 tracking */
+.h-display-1,
+.h-display-2,
+h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
-  line-height: 1.1;
-  margin-bottom: var(--space-lg);
-  font-weight: 600;
+  font-weight: var(--w-bold);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--lh-display);
+  color: var(--fg-1);
+  text-wrap: balance;
+  margin: 0;
 }
 
-h1 {
-  font-size: clamp(32px, 5vw, 56px);
-  letter-spacing: -0.03em;
+.h-display-1 { font-size: var(--t-display-1); line-height: var(--lh-display); }
+.h-display-2 { font-size: var(--t-display-2); line-height: var(--lh-display); }
+h1 { font-size: var(--t-h1); line-height: var(--lh-tight); }
+h2 { font-size: var(--t-h2); line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); }
+h3 { font-size: var(--t-h3); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
+h4 { font-size: var(--t-h4); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
+h5 { font-size: var(--t-h5); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
+
+/* Subheads â€” medium weight, sentence case (CAPS only inside body copy runs) */
+.subhead {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: var(--t-h5);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
 }
 
-h2 {
-  font-size: clamp(28px, 4vw, 48px);
-  letter-spacing: -0.02em;
+/* In-body all-caps subhead (per brand spec) */
+.subhead-caps {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-size: var(--t-caption);
+  color: var(--fg-2);
 }
 
-h3 {
-  font-size: clamp(24px, 3vw, 32px);
-  margin-bottom: var(--space-md);
+/* Body copy â€” light weight, 12 words/line max guidance */
+p, .body {
+  font-family: var(--font-body);
+  font-weight: var(--w-light);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  max-width: 60ch;          /* ~12 words/line */
+  text-wrap: pretty;
+  margin: 0 0 1em 0;
 }
+.body-lg { font-size: var(--t-body-lg); line-height: var(--lh-loose); }
+.body-sm { font-size: var(--t-body-sm); line-height: var(--lh-normal); }
 
-p {
-  margin-bottom: var(--space-md);
-  color: var(--light-text);
-  line-height: 1.7;
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-size: var(--t-eyebrow);
+  color: var(--fg-2);
 }
 
 a {
-  color: var(--signal-red);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--accent); text-decoration-thickness: 2px; }
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
 }
 
-a:hover {
-  color: #e63d42;
-}
+::selection { background: var(--signal-red); color: var(--fog); }
 
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background-color: var(--signal-red);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #e63d42;
-}
-
-.btn-ghost {
-  background-color: transparent;
-  color: var(--dark-text);
-  border: 1px solid var(--border-light);
-}
-
-.btn-ghost:hover {
-  background-color: white;
-  border-color: var(--border-medium);
-}
-
-.btn-light {
-  background-color: white;
-  color: var(--signal-red);
-}
-
-.btn-light:hover {
-  background-color: var(--bg-light);
-}
-
-.btn-dark {
-  background-color: var(--dark-text);
-  color: white;
-}
-
-.btn-dark:hover {
-  background-color: #1a1a1a;
-}
-
-.ico {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  stroke-width: 2;
+/* Reusable utility â€” Celestial gradient text */
+.gradient-text {
+  background: var(--celestial-gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
 }
