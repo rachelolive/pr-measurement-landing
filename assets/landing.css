@@ -213,19 +213,24 @@ Style: colors_and_type.css tokens
   position: absolute; transform: translate(-50%,-50%) rotate(calc(-1 * var(--a)));
 }
 .node-inner {
-  width: 116px; display: flex; flex-direction: column; align-items: center; gap: 9px;
+  width: 116px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
   cursor: default;
 }
-.node-disc { 
-  width: 64px; 
-  height: 64px; 
-  background: white; 
-  border: 2px solid var(--border-light); 
-  border-radius: 50%; 
-  display: flex; 
-  align-items: center; 
+.node-disc {
+  width: 64px;
+  height: 64px;
+  background: var(--pure-white);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all var(--dur-base) var(--ease-out);
 }
 
 .node-disc img { 
@@ -239,6 +244,7 @@ Style: colors_and_type.css tokens
   font-size: 12px;
   color: var(--warm-black);
   margin-top: 8px;
+  text-align: center;
 }
 
 .node-desc {
@@ -246,10 +252,7 @@ Style: colors_and_type.css tokens
   color: var(--fg-2);
   line-height: 1.3;
   margin-top: 4px;
-}
-.node-desc::before {
-  content: ''; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
-  border: 7px solid transparent; border-bottom-color: var(--warm-black);
+  text-align: center;
 }
 .orbit-node:hover { z-index: 30; }
 .orbit-node:hover .node-disc {
