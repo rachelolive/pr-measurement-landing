@@ -1,30 +1,25 @@
 /* ============================================================
-   Signal AI â€” Colors & Type tokens
+   Signal AI – Colors & Type tokens
    Source: Signal Brand Guidelines 2025 V2
    ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   /* ---- PRIMARY ----------------------------------------------- */
   --signal-red:      #FF585D;   /* Primary brand color  - CTAs, accents */
-
   /* ---- SECONDARY --------------------------------------------- */
   --neptune:         #6446FF;   /* Trust, creativity, innovation */
   --digitalis:       #AF46B4;   /* Innovation, ambition, creativity */
-
   /* ---- TERTIARY ---------------------------------------------- */
   --seafoam:         #82DCBE;   /* Positive / success in charts */
   --coral:           #FFA0A0;   /* Soft accent / negative in charts */
   --sunshine:        #FFC864;   /* Highlights / warning in charts */
   --orange:          #FF705A;   /* Alerts / emphasis */
-
   /* ---- NEUTRALS ---------------------------------------------- */
   --warm-black:      #2F2F2F;   /* Text & deep backgrounds */
   --soft-white:      #DFCFCA;   /* Warm cream alt to white */
   --fog:             #F5F4EE;   /* Page background */
   --pure-white:      #FFFFFF;
-
   /* ---- CELESTIAL GRADIENT ------------------------------------ */
   --celestial-gradient:
       linear-gradient(120deg, #6446FF 0%, #AF46B4 50%, #FF585D 100%);
@@ -32,45 +27,37 @@
       linear-gradient(180deg, #6446FF 0%, #AF46B4 50%, #FF585D 100%);
   --celestial-gradient-radial:
       radial-gradient(circle at 30% 20%, #6446FF 0%, #AF46B4 45%, #FF585D 100%);
-
   /* ---- TINTS (10% / 20% backgrounds) ------------------------- */
   --signal-red-10:   #FFE7E8;
   --neptune-10:      #E7E2FF;
   --digitalis-10:    #F4E2F6;
   --seafoam-10:      #E6F8F1;
-
   /* ============================================================
-     SEMANTIC TOKENS â€” light theme (default)
+     SEMANTIC TOKENS – light theme (default)
      ============================================================ */
   --bg:              var(--fog);
   --bg-elevated:     var(--pure-white);
   --bg-inset:        #ECEBE4;
   --surface-warm:    var(--soft-white);
-
   --fg:              var(--warm-black);
   --fg-1:            var(--warm-black);
   --fg-2:            #5C5C5C;
   --fg-3:            #8A8A85;
   --fg-on-red:       var(--fog);
   --fg-on-gradient:  var(--fog);
-
   --border:          #E4E2D9;
   --border-strong:   #C9C6BB;
   --divider:         #EBE9E0;
-
   --accent:          var(--signal-red);
   --accent-fg:       var(--fog);
   --accent-hover:    #F04A4F;   /* slightly darker red for hover */
   --accent-press:    #DA3F44;
-
   --link:            var(--neptune);
   --focus-ring:      #6446FF;
-
   --success:         #4FB890;   /* derived from seafoam */
   --warning:         #E5A53A;   /* derived from sunshine */
   --danger:          var(--signal-red);
   --info:            var(--neptune);
-
   /* ============================================================
      TYPOGRAPHY
      ============================================================
@@ -81,7 +68,6 @@
   --font-display:    'Euclid Flex', 'Poppins', 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body:       'Euclid Flex', 'Poppins', 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono:       'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace;
-
   /* type scale (16px base, 1.25 modular scale) */
   --t-display-1: 96px;
   --t-display-2: 72px;
@@ -95,28 +81,24 @@
   --t-body-sm:   14px;
   --t-caption:   12px;
   --t-eyebrow:   12px;
-
   /* line heights */
   --lh-display:  0.95;   /* tight leading for big headlines */
   --lh-tight:    1.1;
   --lh-snug:     1.25;
   --lh-normal:   1.45;
   --lh-loose:    1.65;
-
-  /* tracking â€” brand spec: headlines run at -10 (i.e. -0.01em-ish in CSS) */
+  /* tracking – brand spec: headlines run at -10 (i.e. -0.01em-ish in CSS) */
   --tracking-display: -0.03em;
   --tracking-tight:   -0.015em;
   --tracking-normal:  0;
   --tracking-wide:    0.04em;
   --tracking-caps:    0.08em;
-
   /* weights */
   --w-light:    300;
   --w-regular:  400;
   --w-medium:   500;
   --w-semibold: 600;
   --w-bold:     700;
-
   /* ============================================================
      SPACING / RADIUS / SHADOWS
      ============================================================ */
@@ -131,7 +113,6 @@
   --space-8:   64px;
   --space-9:   96px;
   --space-10: 128px;
-
   --radius-xs:  4px;
   --radius-sm:  8px;
   --radius-md:  12px;
@@ -139,7 +120,6 @@
   --radius-xl:  28px;
   --radius-2xl: 40px;
   --radius-pill: 999px;
-
   --shadow-xs: 0 1px 2px rgba(47,47,47,.06);
   --shadow-sm: 0 1px 3px rgba(47,47,47,.06), 0 1px 2px rgba(47,47,47,.04);
   --shadow-md: 0 6px 18px rgba(47,47,47,.08), 0 2px 6px rgba(47,47,47,.04);
@@ -147,8 +127,7 @@
   --shadow-xl: 0 28px 60px rgba(47,47,47,.14), 0 10px 24px rgba(47,47,47,.06);
   --shadow-glow-red:     0 8px 28px rgba(255,88,93,.32);
   --shadow-glow-neptune: 0 8px 28px rgba(100,70,255,.30);
-
-  /* easing â€” brand is "dynamic, contemporary"; favour crisp out-curves */
+  /* easing – brand is "dynamic, contemporary"; favour crisp out-curves */
   --ease-out:        cubic-bezier(.22, 1, .36, 1);
   --ease-in-out:     cubic-bezier(.65, 0, .35, 1);
   --ease-spring:     cubic-bezier(.34, 1.56, .64, 1);
@@ -158,7 +137,7 @@
 }
 
 /* ============================================================
-   DARK THEME â€” warm black canvas
+   DARK THEME – warm black canvas
    Apply via [data-theme="dark"] or .theme-dark
    ============================================================ */
 [data-theme="dark"], .theme-dark {
@@ -166,12 +145,10 @@
   --bg-elevated:  #3A3A3A;
   --bg-inset:     #262626;
   --surface-warm: #3A3733;
-
   --fg:           var(--fog);
   --fg-1:         var(--fog);
   --fg-2:         #C9C6BB;
   --fg-3:         #8A8A85;
-
   --border:       #4A4744;
   --border-strong:#6A6661;
   --divider:      #3F3D3A;
@@ -180,7 +157,6 @@
 /* ============================================================
    SEMANTIC ELEMENT STYLES
    ============================================================ */
-
 html, body {
   font-family: var(--font-body);
   font-weight: var(--w-light);
@@ -192,7 +168,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headlines â€” Euclid Flex Bold, sentence case, tight leading, -10 tracking */
+/* Headlines – Euclid Flex Bold, sentence case, tight leading, -10 tracking */
 .h-display-1,
 .h-display-2,
 h1, h2, h3, h4, h5 {
@@ -213,7 +189,7 @@ h3 { font-size: var(--t-h3); line-height: var(--lh-snug); letter-spacing: var(--
 h4 { font-size: var(--t-h4); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
 h5 { font-size: var(--t-h5); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
 
-/* Subheads â€” medium weight, sentence case (CAPS only inside body copy runs) */
+/* Subheads – medium weight, sentence case (CAPS only inside body copy runs) */
 .subhead {
   font-family: var(--font-display);
   font-weight: var(--w-medium);
@@ -232,7 +208,7 @@ h5 { font-size: var(--t-h5); line-height: var(--lh-snug); letter-spacing: var(--
   color: var(--fg-2);
 }
 
-/* Body copy â€” light weight, 12 words/line max guidance */
+/* Body copy – light weight, 12 words/line max guidance */
 p, .body {
   font-family: var(--font-body);
   font-weight: var(--w-light);
@@ -243,6 +219,7 @@ p, .body {
   text-wrap: pretty;
   margin: 0 0 1em 0;
 }
+
 .body-lg { font-size: var(--t-body-lg); line-height: var(--lh-loose); }
 .body-sm { font-size: var(--t-body-sm); line-height: var(--lh-normal); }
 
@@ -262,6 +239,7 @@ a {
   text-decoration-thickness: 1px;
   transition: color var(--dur-fast) var(--ease-out);
 }
+
 a:hover { color: var(--accent); text-decoration-thickness: 2px; }
 
 code, pre, .mono {
@@ -271,11 +249,236 @@ code, pre, .mono {
 
 ::selection { background: var(--signal-red); color: var(--fog); }
 
-/* Reusable utility â€” Celestial gradient text */
+/* Reusable utility – Celestial gradient text */
 .gradient-text {
   background: var(--celestial-gradient);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
           color: transparent;
+}
+
+/* ============================================================
+   ORBIT SECTION - Pain-point visualization
+   ============================================================ */
+.gap-section {
+  padding: var(--space-8) 0;
+  position: relative;
+}
+
+.gap-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.gap-copy h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--t-h2);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg-1);
+  margin: var(--space-5) 0 0;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.gap-copy p {
+  font-family: var(--font-body);
+  font-weight: var(--w-light);
+  font-size: var(--t-body);
+  line-height: var(--lh-loose);
+  color: var(--fg-2);
+  margin: var(--space-5) 0 0;
+  max-width: 52ch;
+}
+
+.gap-copy p .hl {
+  color: var(--fg-1);
+  font-weight: var(--w-semibold);
+}
+
+.gap-hint {
+  margin-top: var(--space-5);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--t-body-sm);
+  font-weight: var(--w-light);
+  color: var(--fg-3);
+}
+
+/* ============================================================
+   ORBIT VISUALIZATION
+   ============================================================ */
+.orbit-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  container-type: size;
+}
+
+.orbit-ring-bg {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 1px dashed var(--border-strong);
+  opacity: 0.6;
+}
+
+.orbit-ring-bg.inner {
+  inset: 28%;
+  opacity: 0.4;
+}
+
+.orbit-hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--warm-black);
+  color: var(--fog);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-3);
+}
+
+.orbit-hub .lbl {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: var(--t-caption);
+  letter-spacing: var(--tracking-caps);
+  line-height: var(--lh-snug);
+  color: var(--fog);
+  margin: 0;
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  animation: orbit-spin 60s linear infinite;
+}
+
+.orbit-wrap:hover .orbit {
+  animation-play-state: paused;
+}
+
+@keyframes orbit-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes orbit-spin-rev {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--a)) translateY(calc(var(--r) * -1));
+}
+
+.orbit-despin {
+  animation: orbit-spin-rev 60s linear infinite;
+}
+
+.orbit-wrap:hover .orbit-despin {
+  animation-play-state: paused;
+}
+
+.orbit-node {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(calc(var(--a) * -1));
+  cursor: default;
+}
+
+.node-inner {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.node-disc {
+  width: 64px;
+  height: 64px;
+  background: var(--pure-white);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--dur-base) var(--ease-out);
+}
+
+.node-disc img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.node-label {
+  font-family: var(--font-display);
+  font-weight: var(--w-semibold);
+  font-size: var(--t-body-sm);
+  color: var(--fg-1);
+  text-align: center;
+  line-height: var(--lh-tight);
+}
+
+.node-desc {
+  font-family: var(--font-body);
+  font-weight: var(--w-light);
+  font-size: var(--t-caption);
+  color: var(--fg-2);
+  line-height: var(--lh-snug);
+  text-align: center;
+  opacity: 0.8;
+  transition: all var(--dur-base) var(--ease-out);
+}
+
+.orbit-node:hover .node-disc {
+  transform: scale(1.15);
+  box-shadow: var(--shadow-glow-red);
+  border-color: var(--signal-red);
+  background: var(--signal-red-10);
+}
+
+.orbit-node:hover .node-label {
+  color: var(--signal-red);
+  font-weight: var(--w-bold);
+}
+
+.orbit-node:hover .node-desc {
+  color: var(--fg-1);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .gap-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .orbit-wrap {
+    max-width: 360px;
+  }
 }
