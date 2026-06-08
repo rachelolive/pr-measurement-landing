@@ -233,9 +233,9 @@ Style: colors_and_type.css tokens
   transition: all var(--dur-base) var(--ease-out);
 }
 
-.node-disc img { 
-  width: 32px; 
-  height: 32px; 
+.node-disc img {
+  width: 44px;
+  height: 44px;
   object-fit: contain;
 }
 
@@ -245,6 +245,9 @@ Style: colors_and_type.css tokens
   color: var(--warm-black);
   margin-top: 8px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
 }
 
 .node-desc {
@@ -259,7 +262,7 @@ Style: colors_and_type.css tokens
   background: var(--celestial-gradient); color: var(--fog);
   transform: scale(1.12); box-shadow: var(--shadow-glow-neptune);
 }
-.orbit-node:hover .node-label { color: var(--neptune); }
+.orbit-node:hover .node-label { color: var(--neptune); opacity: 1; transform: translateY(0); }
 .orbit-node:hover .node-desc { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ---------- Pillars (main alternating) ---------- */
