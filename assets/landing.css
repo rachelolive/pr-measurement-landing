@@ -177,8 +177,8 @@ Style: colors_and_type.css tokens
 
 /* orbit */
 .orbit-wrap {
-  position: relative; width: 100%; max-width: 380px; aspect-ratio: 1;
-  margin: 0 auto; justify-self: center;
+  position: relative; width: 100%; max-width: 400px; aspect-ratio: 1;
+  margin: 0 auto; justify-self: center; align-self: center;
   container-type: size;
 }
 .orbit-ring-bg {
@@ -234,16 +234,16 @@ Style: colors_and_type.css tokens
   object-fit: contain;
 }
 
-.node-label { 
-  font-weight: 600; 
-  font-size: 12px; 
-  color: var(--dark-text);
+.node-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--warm-black);
   margin-top: 8px;
 }
 
-.node-desc { 
-  font-size: 11px; 
-  color: var(--light-text); 
+.node-desc {
+  font-size: 11px;
+  color: var(--fg-2);
   line-height: 1.3;
   margin-top: 4px;
 }
