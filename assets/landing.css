@@ -147,7 +147,7 @@ Style: colors_and_type.css tokens
 .proof-stats .stat span { font-weight: 300; font-size: 14px; color: var(--fg-2); }
 .proof-stats .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--border-strong); }
 
-.marquee { margin-top: 26px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91[...]
+.marquee { margin-top: 26px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
 .marquee-track { display: flex; gap: 56px; width: max-content; animation: marquee 34s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee .name {
@@ -355,7 +355,7 @@ Style: colors_and_type.css tokens
 .pv-answer .aline.s { width: 72%; }
 .pv-cites { display: flex; flex-direction: column; gap: 7px; }
 .pv-cite { display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--border); }
-.pv-cite .badge { width: 18px; height: 18px; border-radius: 5px; background: var(--warm-black); color: var(--fog); display: grid; place-items: center; font-family: var(--font-display); font-size: 9px;[...]
+.pv-cite .badge { width: 18px; height: 18px; border-radius: 5px; background: var(--warm-black); color: var(--fog); display: grid; place-items: center; font-family: var(--font-display); font-size: 9px; font-weight: 600; }
 .pv-cite .src { font-family: var(--font-display); font-size: 11.5px; font-weight: 500; color: var(--warm-black); }
 .pv-cite .ckpt { margin-left: auto; font-family: var(--font-display); font-size: 10px; font-weight: 600; color: var(--success); }
 
@@ -363,7 +363,7 @@ Style: colors_and_type.css tokens
 .solutions { padding: 100px 0; background: var(--warm-black); color: var(--fog); }
 .solutions .pillars-head h2, .solutions h2 { color: var(--fog); }
 .solutions-head { text-align: center; margin-bottom: 54px; display: flex; flex-direction: column; align-items: center; }
-.solutions-head h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(32px,3.4vw,48px); line-height: 1.04; letter-spacing: -0.03em; margin: 14px 0 0; color: var(--fog); max-width: [...]
+.solutions-head h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(32px,3.4vw,48px); line-height: 1.04; letter-spacing: -0.03em; margin: 14px 0 0; color: var(--fog); max-width: 20ch; }
 .sol-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .sol-card {
   display: flex; flex-direction: column;
@@ -446,7 +446,7 @@ Style: colors_and_type.css tokens
 }
 .res-body h3 { font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.22; letter-spacing: -0.02em; color: var(--warm-black); margin: 0; }
 .res-body p { font-family: var(--font-display); font-weight: 300; font-size: 13px; line-height: 1.55; color: var(--fg-2); margin: 12px 0 0; }
-.res-body .go { margin-top: auto; padding-top: 16px; font-family: var(--font-display); font-weight: 500; font-size: 13px; color: var(--signal-red); display: inline-flex; align-items: center; gap: 6px;[...]
+.res-body .go { margin-top: auto; padding-top: 16px; font-family: var(--font-display); font-weight: 500; font-size: 13px; color: var(--signal-red); display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
 .res-body .go .ico { width: 14px; height: 14px; }
 
 /* ---------- Demo CTA ---------- */
@@ -458,7 +458,7 @@ Style: colors_and_type.css tokens
 }
 .demo-inner::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 10%, rgba(255,255,255,.22), transparent 50%); pointer-events: none; }
 .demo-inner img.pyr { position: relative; width: 50px; margin: 0 auto 22px; }
-.demo-inner h2 { position: relative; font-family: var(--font-display); font-weight: 700; font-size: clamp(32px,3.8vw,52px); line-height: 1.02; letter-spacing: -0.03em; color: var(--fog); margin: 0 aut[...]
+.demo-inner h2 { position: relative; font-family: var(--font-display); font-weight: 700; font-size: clamp(32px,3.8vw,52px); line-height: 1.02; letter-spacing: -0.03em; color: var(--fog); margin: 0 auto; }
 .demo-inner p { position: relative; font-family: var(--font-display); font-weight: 300; font-size: 17px; line-height: 1.5; color: rgba(245,244,238,.92); margin: 18px auto 0; max-width: 46ch; }
 .demo-inner .demo-cta { position: relative; margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
