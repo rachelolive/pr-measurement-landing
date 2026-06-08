@@ -58,8 +58,12 @@ Style: colors_and_type.css tokens
   border-bottom: 1px solid var(--border);
 }
 .nav-logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
-.nav-logo img { width: 26px; height: 26px; }
-.nav-logo span {
+.nav-logo img { 
+  height: 32px; 
+  width: auto;
+  object-fit: contain;
+  display: block;
+}.nav-logo span {
   font-family: var(--font-display); font-weight: 700; font-size: 18px;
   letter-spacing: -0.025em; color: var(--warm-black); white-space: nowrap;
 }
