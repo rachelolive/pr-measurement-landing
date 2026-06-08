@@ -1,0 +1,144 @@
+/* Signal AI Brand Colors & Typography */
+
+:root {
+  /* Colors */
+  --bg-light: #F5F4EE;
+  --signal-red: #FF585D;
+  --coral: #FF585D;
+  --seafoam: #5ECCC8;
+  --sunshine: #FFB400;
+  --dark-text: #2F2F2F;
+  --light-text: #666666;
+  --border-light: #E4E2D9;
+  --border-medium: #C9C6BB;
+
+  /* Typography */
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-display: 'GT Sectra', Georgia, serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-light);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: var(--space-md);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--light-text);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--signal-red);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #e63d42;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--signal-red);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e63d42;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--dark-text);
+  border: 1px solid var(--border-light);
+}
+
+.btn-ghost:hover {
+  background-color: white;
+  border-color: var(--border-medium);
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--signal-red);
+}
+
+.btn-light:hover {
+  background-color: var(--bg-light);
+}
+
+.btn-dark {
+  background-color: var(--dark-text);
+  color: white;
+}
+
+.btn-dark:hover {
+  background-color: #1a1a1a;
+}
+
+.ico {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
