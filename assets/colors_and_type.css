@@ -164,8 +164,8 @@ html, body {
   line-height: var(--lh-normal);
   color: var(--fg);
   background: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;
+  /*-moz-osx-font-smoothing: grayscale;*/
 }
 
 /* Headlines – Euclid Flex Bold, sentence case, tight leading, -10 tracking */
@@ -286,11 +286,11 @@ code, pre, .mono {
 }
 
 .gap-copy p {
+  color: var(--fg-1); 
   font-family: var(--font-body);
   font-weight: var(--w-light);
   font-size: var(--t-body);
   line-height: var(--lh-loose);
-  color: var(--fg-2);
   margin: var(--space-5) 0 0;
   max-width: 52ch;
 }
