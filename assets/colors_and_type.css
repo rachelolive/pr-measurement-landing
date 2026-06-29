@@ -249,6 +249,7 @@ code, pre, .mono {
 
 ::selection { background: var(--signal-red); color: var(--fog); }
 
+
 /* Reusable utility – Celestial gradient text */
 .gradient-text {
   background: var(--celestial-gradient);
@@ -481,4 +482,15 @@ code, pre, .mono {
   .orbit-wrap {
     max-width: 360px;
   }
+}
+
+
+/* Keep the "measurement gap" bubbles beside the text on narrower screens too */
+@media (max-width: 980px) {
+  .gap-inner { grid-template-columns: 1.15fr 0.85fr; gap: 32px; }
+  .orbit-wrap { max-width: 360px; }   /* orbit auto-scales, stays a clean ring */
+}
+@media (max-width: 620px) {
+  /* only stack on phones, where there genuinely isn't room */
+  .gap-inner { grid-template-columns: 1fr; }
 }
