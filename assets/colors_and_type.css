@@ -3,7 +3,6 @@
    Source: Signal Brand Guidelines 2025 V2
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 :root {
   /* ---- PRIMARY ----------------------------------------------- */
   --signal-red:      #FF585D;   /* Primary brand color  - CTAs, accents */
@@ -135,7 +134,6 @@
   --dur-base:        220ms;
   --dur-slow:        420ms;
 }
-
 /* ============================================================
    DARK THEME – warm black canvas
    Apply via [data-theme="dark"] or .theme-dark
@@ -153,7 +151,6 @@
   --border-strong:#6A6661;
   --divider:      #3F3D3A;
 }
-
 /* ============================================================
    SEMANTIC ELEMENT STYLES
    ============================================================ */
@@ -164,10 +161,7 @@ html, body {
   line-height: var(--lh-normal);
   color: var(--fg);
   background: var(--bg);
-  /*-webkit-font-smoothing: antialiased;
-  /*-moz-osx-font-smoothing: grayscale;*/
 }
-
 /* Headlines – Euclid Flex Bold, sentence case, tight leading, -10 tracking */
 .h-display-1,
 .h-display-2,
@@ -180,7 +174,6 @@ h1, h2, h3, h4, h5 {
   text-wrap: balance;
   margin: 0;
 }
-
 .h-display-1 { font-size: var(--t-display-1); line-height: var(--lh-display); }
 .h-display-2 { font-size: var(--t-display-2); line-height: var(--lh-display); }
 h1 { font-size: var(--t-h1); line-height: var(--lh-tight); }
@@ -188,7 +181,6 @@ h2 { font-size: var(--t-h2); line-height: var(--lh-tight); letter-spacing: var(-
 h3 { font-size: var(--t-h3); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
 h4 { font-size: var(--t-h4); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
 h5 { font-size: var(--t-h5); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); }
-
 /* Subheads – medium weight, sentence case (CAPS only inside body copy runs) */
 .subhead {
   font-family: var(--font-display);
@@ -197,7 +189,6 @@ h5 { font-size: var(--t-h5); line-height: var(--lh-snug); letter-spacing: var(--
   line-height: var(--lh-snug);
   color: var(--fg-1);
 }
-
 /* In-body all-caps subhead (per brand spec) */
 .subhead-caps {
   font-family: var(--font-display);
@@ -207,7 +198,6 @@ h5 { font-size: var(--t-h5); line-height: var(--lh-snug); letter-spacing: var(--
   font-size: var(--t-caption);
   color: var(--fg-2);
 }
-
 /* Body copy – light weight, 12 words/line max guidance */
 p, .body {
   font-family: var(--font-body);
@@ -219,10 +209,8 @@ p, .body {
   text-wrap: pretty;
   margin: 0 0 1em 0;
 }
-
 .body-lg { font-size: var(--t-body-lg); line-height: var(--lh-loose); }
 .body-sm { font-size: var(--t-body-sm); line-height: var(--lh-normal); }
-
 .eyebrow {
   font-family: var(--font-display);
   font-weight: var(--w-medium);
@@ -231,7 +219,6 @@ p, .body {
   font-size: var(--t-eyebrow);
   color: var(--fg-2);
 }
-
 a {
   color: var(--link);
   text-decoration: underline;
@@ -239,17 +226,12 @@ a {
   text-decoration-thickness: 1px;
   transition: color var(--dur-fast) var(--ease-out);
 }
-
 a:hover { color: var(--accent); text-decoration-thickness: 2px; }
-
 code, pre, .mono {
   font-family: var(--font-mono);
   font-size: 0.92em;
 }
-
 ::selection { background: var(--signal-red); color: var(--fog); }
-
-
 /* Reusable utility – Celestial gradient text */
 .gradient-text {
   background: var(--celestial-gradient);
@@ -258,7 +240,6 @@ code, pre, .mono {
   -webkit-text-fill-color: transparent;
           color: transparent;
 }
-
 /* ============================================================
    ORBIT SECTION - Pain-point visualization
    ============================================================ */
@@ -266,14 +247,16 @@ code, pre, .mono {
   padding: var(--space-8) 0;
   position: relative;
 }
-
+/* Text on the left, bubbles on the right — side by side at ALL widths.
+   The bubble column is a flexible clamp() so it can shrink instead of
+   dropping below the text; the orbit (sized in container units) scales
+   with it and stays a clean ring. */
 .gap-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr clamp(150px, 38%, 360px);
   gap: var(--space-7);
   align-items: center;
 }
-
 .gap-copy h2 {
   font-family: var(--font-display);
   font-weight: var(--w-bold);
@@ -285,9 +268,8 @@ code, pre, .mono {
   max-width: 18ch;
   text-wrap: balance;
 }
-
 .gap-copy p {
-  color: var(--fg-1); 
+  color: var(--fg-1);
   font-family: var(--font-body);
   font-weight: var(--w-light);
   font-size: var(--t-body);
@@ -295,12 +277,10 @@ code, pre, .mono {
   margin: var(--space-5) 0 0;
   max-width: 52ch;
 }
-
 .gap-copy p .hl {
   color: var(--fg-1);
   font-weight: var(--w-semibold);
 }
-
 .gap-hint {
   margin-top: var(--space-5);
   display: inline-flex;
@@ -311,19 +291,17 @@ code, pre, .mono {
   font-weight: var(--w-light);
   color: var(--fg-3);
 }
-
 /* ============================================================
    ORBIT VISUALIZATION
    ============================================================ */
 .orbit-wrap {
   position: relative;
   width: 100%;
-  max-width: 340px;
+  max-width: 360px;
   aspect-ratio: 1;
   margin: 0 auto;
   container-type: size;
 }
-
 .orbit-ring-bg {
   position: absolute;
   inset: 12%;
@@ -331,12 +309,10 @@ code, pre, .mono {
   border: 1px dashed var(--border-strong);
   opacity: 0.6;
 }
-
 .orbit-ring-bg.inner {
   inset: 28%;
   opacity: 0.4;
 }
-
 .orbit-hub {
   position: absolute;
   top: 50%;
@@ -355,7 +331,6 @@ code, pre, .mono {
   box-shadow: var(--shadow-lg);
   padding: var(--space-3);
 }
-
 .orbit-hub .lbl {
   font-family: var(--font-display);
   font-weight: var(--w-medium);
@@ -365,27 +340,22 @@ code, pre, .mono {
   color: var(--fog);
   margin: 0;
 }
-
 .orbit {
   position: absolute;
   inset: 0;
   animation: orbit-spin 60s linear infinite;
 }
-
 .orbit-wrap:hover .orbit {
   animation-play-state: paused;
 }
-
 @keyframes orbit-spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 @keyframes orbit-spin-rev {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(-360deg); }
 }
-
 .orbit-item {
   position: absolute;
   top: 50%;
@@ -394,21 +364,17 @@ code, pre, .mono {
   height: 0;
   transform: rotate(var(--a)) translateY(calc(var(--r) * -1));
 }
-
 .orbit-despin {
   animation: orbit-spin-rev 60s linear infinite;
 }
-
 .orbit-wrap:hover .orbit-despin {
   animation-play-state: paused;
 }
-
 .orbit-node {
   position: absolute;
   transform: translate(-50%, -50%) rotate(calc(var(--a) * -1));
   cursor: default;
 }
-
 .node-inner {
   width: 110px;
   display: flex;
@@ -416,7 +382,6 @@ code, pre, .mono {
   align-items: center;
   gap: var(--space-2);
 }
-
 .node-disc {
   width: 64px;
   height: 64px;
@@ -429,13 +394,11 @@ code, pre, .mono {
   flex-shrink: 0;
   transition: all var(--dur-base) var(--ease-out);
 }
-
 .node-disc img {
   width: 48px;
   height: 48px;
   object-fit: contain;
 }
-
 .node-label {
   font-family: var(--font-display);
   font-weight: var(--w-semibold);
@@ -444,7 +407,6 @@ code, pre, .mono {
   text-align: center;
   line-height: var(--lh-tight);
 }
-
 .node-desc {
   font-family: var(--font-body);
   font-weight: var(--w-light);
@@ -455,42 +417,51 @@ code, pre, .mono {
   opacity: 0.8;
   transition: all var(--dur-base) var(--ease-out);
 }
-
 .orbit-node:hover .node-disc {
   transform: scale(1.15);
   box-shadow: var(--shadow-glow-red);
   border-color: var(--signal-red);
   background: var(--signal-red-10);
 }
-
 .orbit-node:hover .node-label {
   color: var(--signal-red);
   font-weight: var(--w-bold);
 }
-
 .orbit-node:hover .node-desc {
   color: var(--fg-1);
   opacity: 1;
 }
+/* ============================================================
+   RESPONSIVE  — bubbles always stay BESIDE the text.
+   We never switch to a single column; instead the bubble
+   column and the ring labels scale down as space tightens.
+   ============================================================ */
 
-@media (max-width: 768px) {
-  .gap-inner {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-
-  .orbit-wrap {
-    max-width: 360px;
-  }
+/* Tablets / narrow windows: tighten the gap, shrink labels a touch */
+@media (max-width: 900px) {
+  .gap-inner { gap: var(--space-6); }
+  .gap-copy h2 { font-size: var(--t-h3); }
+  .node-inner { width: 92px; }
+  .node-label { font-size: 14px; }
 }
-
-
-/* Keep the "measurement gap" bubbles beside the text on narrower screens too */
-@media (max-width: 980px) {
-  .gap-inner { grid-template-columns: 1.15fr 0.85fr; gap: 32px; }
-  .orbit-wrap { max-width: 360px; }   /* orbit auto-scales, stays a clean ring */
+/* Small windows / large phones: smaller ring + hub, hide hover-only copy */
+@media (max-width: 640px) {
+  .gap-section { padding: var(--space-7) 0; }
+  .gap-inner { gap: var(--space-5); }
+  .gap-copy p { font-size: 16px; line-height: var(--lh-normal); }
+  .orbit-hub { width: 64px; height: 64px; padding: var(--space-2); }
+  .node-inner { width: 80px; }
+  .node-label { font-size: 12px; }
+  .node-desc { display: none; }
 }
-@media (max-width: 620px) {
-  /* only stack on phones, where there genuinely isn't room */
-  .gap-inner { grid-template-columns: 1fr; }
+/* Phones: keep it side by side but as compact as possible */
+@media (max-width: 460px) {
+  .gap-inner { gap: var(--space-4); }
+  .gap-copy h2 { font-size: var(--t-h4); }
+  .orbit-hub { width: 54px; height: 54px; }
+  .orbit-hub .lbl { font-size: 10px; letter-spacing: 0.04em; }
+  .node-inner { width: 60px; }
+  .node-disc { width: 48px; height: 48px; }
+  .node-disc img { width: 34px; height: 34px; }
+  .node-label { font-size: 10px; }
 }
