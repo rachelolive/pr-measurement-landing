@@ -42,7 +42,6 @@
   --ease-out:cubic-bezier(.22,1,.36,1); --ease-spring:cubic-bezier(.34,1.56,.64,1);
   --dur-fast:140ms; --dur-base:220ms; --dur-slow:420ms;
 }
-
 * , *::before, *::after { box-sizing:border-box; }
 * { margin:0; padding:0; }
 html { scroll-behavior:smooth; }
@@ -61,7 +60,6 @@ p { font-family:var(--font-body); font-weight:var(--w-light); margin:0; }
 a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) var(--ease-out); }
 ::selection { background:var(--signal-red); color:var(--fog); }
 #platform,#solutions,#aiq,#customers,#resources,#company { scroll-margin-top:84px; }
-
 .wrap { max-width:1200px; margin:0 auto; padding:0 40px; }
 .eyebrow-line {
   display:inline-flex; align-items:center; gap:10px;
@@ -71,7 +69,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .eyebrow-line::before { content:''; width:26px; height:1.5px; background:currentColor; }
 .eyebrow-line.center { justify-content:center; }
 .section-head-center { text-align:center; display:flex; flex-direction:column; align-items:center; }
-
 /* ---------- Buttons ---------- */
 .btn {
   display:inline-flex; align-items:center; justify-content:center; gap:9px;
@@ -89,7 +86,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .btn-dark:hover { background:#1f1f1f; color:var(--fog); }
 .btn-light { background:var(--fog); color:var(--warm-black); }
 .btn-light:hover { background:#fff; color:var(--warm-black); }
-
 /* ---------- Nav ---------- */
 .nav {
   position:sticky; top:0; z-index:100; display:flex; align-items:center; gap:32px;
@@ -104,7 +100,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .nav-links a:hover { background:rgba(47,47,47,.05); }
 .nav-actions { margin-left:auto; display:flex; gap:10px; align-items:center; }
 .nav-actions .btn { padding:11px 20px; font-size:14px; }
-
 /* ---------- Hero ---------- */
 .hero { position:relative; overflow:hidden; padding:76px 0 84px; }
 .hero-glow { position:absolute; top:-180px; right:-160px; width:620px; height:620px; background:var(--celestial-gradient-radial); border-radius:50%; filter:blur(20px); opacity:.16; pointer-events:none; z-index:0; }
@@ -115,7 +110,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .hero .lede { font-family:var(--font-display); font-weight:300; font-size:16px; line-height:1.6; color:var(--fg-2); margin:16px 0 0; max-width:48ch; }
 .hero-cta { display:flex; gap:12px; align-items:center; margin-top:30px; flex-wrap:wrap; }
 .hero-visual { position:relative; justify-self:end; width:100%; max-width:660px; }
-
 /* hero dashboard */
 .hero-dash { width:100%; aspect-ratio:1.30; background:var(--pure-white); border-radius:16px; box-shadow:0 30px 60px rgba(47,47,47,.26); border:1px solid #e8e6df; overflow:hidden; display:flex; flex-direction:column; font-family:var(--font-display); }
 .hd-bar { display:flex; align-items:center; padding:9px 14px; background:#eef0f2; flex-shrink:0; }
@@ -152,7 +146,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .hd-legend span { display:flex; align-items:center; gap:6px; }
 .hd-legend i { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
 .hd-legend b { margin-left:auto; color:var(--warm-black); font-weight:700; }
-
 /* ---------- Social proof ---------- */
 .proof { padding:30px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--fog); }
 .proof-stats { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:14px 36px; }
@@ -168,7 +161,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .marquee .logo:hover { filter:grayscale(0); opacity:1; }
 .res-img { width:100%; height:100%; object-fit:cover; display:block; }
 @keyframes marquee { to { transform:translateX(-50%); } }
-
 /* ============================================================
    GAP SECTION + ORBIT
    ============================================================ */
@@ -177,7 +169,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .gap-copy h2 { font-family:var(--font-display); font-weight:700; font-size:clamp(30px,3.2vw,44px); line-height:1.04; letter-spacing:-0.03em; color:var(--warm-black); margin:20px 0 0; max-width:16ch; text-wrap:balance; }
 .gap-copy p { font-family:var(--font-display); font-weight:300; font-size:16px; line-height:1.65; color:var(--fg-2); margin:22px 0 0; max-width:52ch; }
 .gap-copy p .hl { color:var(--warm-black); font-weight:600; }
-
 .orbit-wrap { position:relative; width:100%; max-width:520px; aspect-ratio:1; margin:0 auto; justify-self:center; container-type:size; }
 .orbit-ring-bg { position:absolute; inset:11%; border-radius:50%; border:1px dashed var(--border-strong); opacity:.7; }
 .orbit-ring-bg.inner { inset:27%; opacity:.45; }
@@ -201,7 +192,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .orbit-node:hover .node-disc { background:var(--celestial-gradient); color:var(--fog); transform:scale(1.12); box-shadow:var(--shadow-glow-neptune); }
 .orbit-node:hover .node-label { color:var(--neptune); }
 .orbit-node:hover .node-desc { opacity:1; transform:translateX(-50%) translateY(0); }
-
 /* ---------- Pillars ---------- */
 .pillars { padding:16px 0 40px; }
 .pillars-head { text-align:center; margin-bottom:64px; display:flex; flex-direction:column; align-items:center; }
@@ -221,7 +211,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .pv-doc .lineh { height:13px; border-radius:4px; background:var(--warm-black); width:55%; }
 .pv-doc .line { height:8px; border-radius:4px; background:var(--bg-inset); }
 .pv-doc .line.s { width:80%; } .pv-doc .line.t { width:65%; }
-
 /* ---------- Solutions ---------- */
 .solutions { padding:100px 0; background:var(--warm-black); color:var(--fog); }
 .solutions-head { text-align:center; margin-bottom:54px; display:flex; flex-direction:column; align-items:center; }
@@ -238,7 +227,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .sol-foot { text-align:center; margin-top:36px; font-family:var(--font-display); font-weight:300; font-size:15px; color:rgba(245,244,238,.7); }
 .sol-foot a { color:var(--fog); text-decoration:underline; text-decoration-color:var(--signal-red); }
 .sol-foot a:hover { color:var(--signal-red); }
-
 /* ---------- Differentiators ---------- */
 .diff { padding:104px 0; }
 .diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:56px; }
@@ -250,7 +238,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .diff-col p { font-family:var(--font-display); font-weight:300; font-size:14.5px; line-height:1.6; color:var(--fg-2); margin:0; }
 .diff-col p a { color:var(--neptune); text-decoration:underline; }
 .diff-foot { margin-top:44px; }
-
 /* ---------- Testimonials ---------- */
 .testi { padding:100px 0; background:var(--soft-white); }
 .testi-grid { display:grid; grid-template-columns:1.3fr 1fr; gap:18px; margin-top:50px; }
@@ -266,7 +253,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .testi-card.feat .who .meta b { color:var(--fog); }
 .testi-card .who .meta span { font-family:var(--font-display); font-weight:300; font-size:12.5px; color:var(--fg-2); }
 .testi-card.feat .who .meta span { color:rgba(245,244,238,.7); }
-
 /* ---------- Resources ---------- */
 .res { padding:104px 0; }
 .res-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:52px; }
@@ -283,7 +269,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .res-body p { font-family:var(--font-display); font-weight:300; font-size:13px; line-height:1.55; color:var(--fg-2); margin:12px 0 0; }
 .res-body .go { margin-top:auto; padding-top:16px; font-family:var(--font-display); font-weight:500; font-size:13px; color:var(--signal-red); display:inline-flex; align-items:center; gap:6px; }
 .res-body .go .ico { width:14px; height:14px; }
-
 /* ---------- Demo CTA ---------- */
 .demo { padding:0 40px 80px; }
 .demo-inner { max-width:1200px; margin:0 auto; position:relative; overflow:hidden; border-radius:var(--radius-2xl); background:var(--celestial-gradient); padding:76px 64px; text-align:center; }
@@ -291,7 +276,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .demo-inner h2 { position:relative; font-family:var(--font-display); font-weight:700; font-size:clamp(32px,3.8vw,52px); line-height:1.02; letter-spacing:-0.03em; color:var(--fog); margin:0 auto; max-width:20ch; text-wrap:balance; }
 .demo-inner p { position:relative; font-family:var(--font-display); font-weight:300; font-size:17px; line-height:1.5; color:rgba(245,244,238,.92); margin:18px auto 0; max-width:46ch; }
 .demo-inner .demo-cta { position:relative; margin-top:30px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-
 /* ---------- FAQ ---------- */
 .faq { padding:0 0 110px; }
 .faq-grid { max-width:860px; margin:50px auto 0; }
@@ -304,7 +288,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .faq-item .ans { padding:0 56px 26px 8px; font-family:var(--font-display); font-weight:300; font-size:15px; line-height:1.65; color:var(--fg-2); }
 .faq-item .ans a { color:var(--neptune); text-decoration:underline; }
 .faq-item .ans b { font-weight:600; color:var(--warm-black); }
-
 /* ---------- Footer ---------- */
 .footer { background:var(--bg); border-top:1px solid var(--border); padding:60px 0 32px; }
 .footer-inner { display:grid; grid-template-columns:0.7fr 1fr 1fr; gap:40px; align-items:start; }
@@ -324,7 +307,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .footer-bottom .spacer { flex:1; }
 .footer-bottom a { color:var(--fg-3); }
 .footer-bottom a:hover { color:var(--warm-black); }
-
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -369,7 +351,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 @media (prefers-reduced-motion: reduce) {
   .orbit, .orbit-despin, .marquee-track { animation:none !important; }
 }
-
 /* ---------- Real image assets ---------- */
 .nav-logo img { height:26px; width:auto; display:block; }
 .footer .brand-blurb .lockup img { height:24px; width:auto; display:block; }
@@ -380,7 +361,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 @media (max-width:620px){ .node-disc .node-img { width:40px; height:40px; } }
 .diff-col .ico-wrap:has(.diff-img) { background:var(--pure-white); border:1px solid var(--border); }
 .diff-col .ico-wrap .diff-img { width:34px; height:34px; object-fit:contain; }
-
 /* ============================================================
    PILLAR MOCKUP ANIMATIONS
    ============================================================ */
@@ -390,7 +370,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .aiq-stage .aiq-window { position:relative; z-index:1; box-shadow:0 10px 28px rgba(47,47,47,.10); }
 .aiq-stage.no-grad::before { content:none; }
 .aiq-stage.no-grad.in-view .aiq-window { box-shadow:0 8px 24px rgba(47,47,47,.08); }
-
 /* Ask AIQ chat */
 .aiq-chat { padding:14px !important; gap:10px !important; justify-content:flex-end; }
 .aiq-msgs { flex:1; display:flex; flex-direction:column; gap:9px; overflow:hidden; justify-content:flex-end; }
@@ -420,7 +399,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 @keyframes blink { 50% { opacity:0; } }
 .aiq-fade { animation:aiqFade .45s ease forwards; }
 @keyframes aiqFade { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)} }
-
 /* Executive briefing email/PDF */
 .ebrief { padding:0 !important; gap:0 !important; }
 .eb-scroll { flex:1; overflow:hidden; position:relative; }
@@ -445,7 +423,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .bf-spot { border:1px solid var(--border); border-radius:10px; overflow:hidden; }
 .bf-band { background:var(--celestial-gradient); color:var(--fog); font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.04em; padding:9px 11px; }
 .bf-spot p { padding:10px 11px; margin:0 !important; font-family:var(--font-display); font-size:11px; line-height:1.7; color:var(--fg-2); }
-
 /* Reputation report */
 .preport { padding:0 !important; gap:0 !important; overflow:hidden; }
 .rp-doc { position:relative; padding:16px; display:flex; flex-direction:column; gap:13px; will-change:transform; }
@@ -462,7 +439,6 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .rp-chart i { flex:1; border-radius:2px 2px 0 0; background:var(--neptune); transform:scaleY(0); transform-origin:bottom; transition:transform .5s cubic-bezier(.2,.7,.3,1); display:block; }
 .rp-line { height:7px; border-radius:4px; background:var(--bg-inset); margin-bottom:6px; }
 .rp-line.s { width:82%; } .rp-line.t { width:60%; }
-
 /* Memo citations */
 .pcite { gap:12px !important; }
 .ci-answer { background:var(--bg-inset); border:1px solid var(--border); border-radius:11px; padding:12px; }
@@ -475,13 +451,11 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 .ci-row .badge { width:18px; height:18px; flex-shrink:0; border-radius:50%; background:var(--celestial-gradient); color:var(--pure-white); font-family:var(--font-display); font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; }
 .ci-row .src { font-family:var(--font-display); font-size:11px; color:var(--warm-black); flex:1; }
 .ci-row .tag { font-family:var(--font-display); font-size:9px; color:var(--seafoam); font-weight:600; background:var(--seafoam-10); border-radius:6px; padding:2px 7px; }
-
 /* ============================================================
    RESPONSIVE POLISH — cross-device alignment & rhythm
    (kept last so it reliably wins the cascade)
    ============================================================ */
 img { max-width:100%; }
-
 /* Tablet / narrow desktop */
 @media (max-width: 980px) {
   .nav { padding:12px 26px; gap:16px; }
@@ -493,7 +467,6 @@ img { max-width:100%; }
   .demo { padding:0 40px 64px; }
   .demo-inner { padding:60px 40px; }
 }
-
 /* Large phones */
 @media (max-width: 760px) {
   .nav { padding:11px 20px; gap:12px; }
@@ -508,7 +481,6 @@ img { max-width:100%; }
   .marquee .logo { width:96px; height:28px; }
   .pillar-visual { padding:20px; }
 }
-
 /* Phones */
 @media (max-width: 560px) {
   .nav { padding:10px 18px; }
@@ -532,7 +504,6 @@ img { max-width:100%; }
   .demo { padding:0 18px 52px; }
   .demo-inner { padding:46px 22px; }
 }
-
 /* Small phones — keep the orbit ring tidy & readable */
 @media (max-width: 440px) {
   .gap-inner { gap:12px; }
@@ -543,10 +514,30 @@ img { max-width:100%; }
   .node-disc .node-img { width:34px; height:34px; }
   .node-label { font-size:9px; line-height:1.08; max-width:58px; }
 }
+/* ============================================================
+   ADDED: Audience banner + Business Impact metrics
+   ============================================================ */
+/* Audience banner (above social proof) */
+.audience-band { background:var(--celestial-gradient); color:var(--fog); }
+.audience-band .wrap { display:flex; align-items:center; justify-content:center; gap:14px; text-align:center; padding-top:26px; padding-bottom:26px; }
+.audience-band .ico { width:22px; height:22px; flex-shrink:0; color:var(--fog); opacity:.92; }
+.audience-band p { font-family:var(--font-display); font-weight:400; font-size:clamp(15px,1.7vw,19px); line-height:1.5; color:var(--fog); max-width:74ch; margin:0; }
+.audience-band p b { font-weight:700; }
+@media (max-width:560px){ .audience-band .wrap { gap:10px; padding-top:20px; padding-bottom:20px; } .audience-band .ico { display:none; } }
+/* Business Impact metrics */
+.impact { padding:0; }
+.impact-head { text-align:center; display:flex; flex-direction:column; align-items:center; }
+.impact-head h2 { font-family:var(--font-display); font-weight:700; font-size:clamp(32px,3.6vw,48px); line-height:1.04; letter-spacing:-0.03em; color:var(--warm-black); margin:14px 0 0; max-width:24ch; text-wrap:balance; }
+.impact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:52px; }
+.impact-stat { background:var(--pure-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:30px 28px; box-shadow:var(--shadow-sm); }
+.impact-stat .num { font-family:var(--font-display); font-weight:700; font-size:clamp(38px,4.6vw,54px); line-height:1; letter-spacing:-0.03em; background:var(--celestial-gradient); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.impact-stat p { font-family:var(--font-display); font-weight:300; font-size:15px; line-height:1.5; color:var(--fg-2); margin:14px 0 0; }
+.impact-stat p b { font-weight:600; color:var(--warm-black); }
+@media (max-width:980px){ .impact-grid { grid-template-columns:1fr; gap:14px; margin-top:36px; } }
+@media (max-width:560px){ .impact-stat { padding:24px 22px; } }
 </style>
 </head>
 <body>
-
 <!-- ============== NAV ============== -->
 <nav class="nav">
   <a class="nav-logo" href="https://www.signal-ai.com" target="_blank" rel="noopener">
@@ -565,7 +556,6 @@ img { max-width:100%; }
     <a class="btn btn-primary">Book a demo <i class="ico" data-lucide="arrow-right"></i></a>
   </div>
 </nav>
-
 <!-- ============== HERO ============== -->
 <header class="hero" id="top">
   <div class="hero-glow"></div>
@@ -630,7 +620,13 @@ img { max-width:100%; }
     </div>
   </div>
 </header>
-
+<!-- ============== AUDIENCE BANNER ============== -->
+<section class="audience-band">
+  <div class="wrap">
+    <i class="ico" data-lucide="users"></i>
+    <p>Designed for <b>Heads of Communications, Corporate Affairs Leaders, and PR Teams</b> who need to demonstrate measurable business impact&mdash;not just media performance.</p>
+  </div>
+</section>
 <!-- ============== SOCIAL PROOF ============== -->
 <section class="proof">
   <div class="wrap">
@@ -648,7 +644,6 @@ img { max-width:100%; }
     </div>
   </div>
 </section>
-
 <!-- ============== THE GAP / ORBIT ============== -->
 <section class="gap-section">
   <div class="wrap gap-inner">
@@ -657,7 +652,6 @@ img { max-width:100%; }
       <h2>The measurement gap is real, and it's costing PR teams a seat at the table.</h2>
       <p> Manual data pulls for thousands of mentions. Hundreds of hours spent on unopened reports. Endless dashboards with inconsistent or inaccurate metrics. And every reporting cycle, leadership still asks: What impact did communications actually have? The challenge isn't your strategy, it's proving value. Signal AI helps communications teams move beyond vanity metrics and activity reporting to demonstrate measurable business impact. With trusted measurement, executive-ready reporting, and clear methodologies, you can answer the questions that matter most: Did communications make a difference? And more importantly: Can you prove it?</p>
     </div>
-
     <div class="orbit-wrap">
       <div class="orbit-ring-bg"></div>
       <div class="orbit-ring-bg inner"></div>
@@ -702,14 +696,12 @@ img { max-width:100%; }
     </div>
   </div>
 </section>
-
 <!-- ============== PILLARS ============== -->
 <section class="pillars wrap" id="platform">
   <div class="pillars-head">
     <div class="eyebrow-line center">How it works</div>
     <h2>How Signal AI delivers trusted PR measurement</h2>
   </div>
-
   <div class="pillar">
     <div class="pillar-copy">
       <div class="eyebrow-line">Data credibility</div>
@@ -732,7 +724,6 @@ img { max-width:100%; }
       </div>
     </div>
   </div>
-
   <div class="pillar flip">
     <div class="pillar-copy">
       <div class="eyebrow-line">Executive reporting</div>
@@ -756,7 +747,6 @@ img { max-width:100%; }
       </div>
     </div>
   </div>
-
   <div class="pillar">
     <div class="pillar-copy">
       <div class="eyebrow-line">Measurement standards</div>
@@ -776,7 +766,6 @@ img { max-width:100%; }
       </div>
     </div>
   </div>
-
   <div class="pillar flip">
     <div class="pillar-copy">
       <div class="eyebrow-line">LLM &amp; AI citation tracking</div>
@@ -794,7 +783,6 @@ img { max-width:100%; }
     </div>
   </div>
 </section>
-
 <!-- ============== SOLUTIONS ============== -->
 <section class="solutions" id="solutions">
   <div class="wrap">
@@ -831,7 +819,6 @@ img { max-width:100%; }
     <p class="sol-foot">Not finding what you're looking for? <a href="http://signal-ai.com/contact-us">Get in touch here.</a></p>
   </div>
 </section>
-
 <!-- ============== DIFFERENTIATORS ============== -->
 <section class="diff wrap" id="aiq">
   <div class="section-head-center">
@@ -859,7 +846,27 @@ img { max-width:100%; }
     <a class="btn btn-dark" href="https://signal-ai.com/approach/">Learn more about our approach <i class="ico" data-lucide="arrow-right"></i></a>
   </div>
 </section>
-
+<!-- ============== BUSINESS IMPACT ============== -->
+<section class="impact wrap">
+  <div class="impact-head">
+    <div class="eyebrow-line center">Business Impact</div>
+    <h2>What Customers Achieve with Signal AI PR Measurement</h2>
+  </div>
+  <div class="impact-grid">
+    <div class="impact-stat">
+      <div class="num">3&#215;</div>
+      <p><b>Faster executive reporting cycles</b> — from days to hours</p>
+    </div>
+    <div class="impact-stat">
+      <div class="num">80%</div>
+      <p><b>Up to 80% of relevant coverage captured</b> vs. ~40% with traditional clipping services</p>
+    </div>
+    <div class="impact-stat">
+      <div class="num">48h</div>
+      <p><b>First trained topic deployed</b> within 48 hours</p>
+    </div>
+  </div>
+</section>
 <!-- ============== TESTIMONIALS ============== -->
 <section class="testi" id="customers">
   <div class="wrap">
@@ -890,7 +897,6 @@ img { max-width:100%; }
     </div>
   </div>
 </section>
-
 <!-- ============== RESOURCES ============== -->
 <section class="res wrap" id="resources">
   <div class="section-head-center">
@@ -927,7 +933,6 @@ img { max-width:100%; }
     </a>
   </div>
 </section>
-
 <!-- ============== DEMO CTA ============== -->
 <section class="demo">
   <div class="demo-inner">
@@ -936,7 +941,6 @@ img { max-width:100%; }
     <div class="demo-cta"><a class="btn btn-light">Request a demo <i class="ico" data-lucide="arrow-right"></i></a></div>
   </div>
 </section>
-
 <!-- ============== FAQ ============== -->
 <section class="faq wrap">
   <div class="section-head-center">
@@ -951,7 +955,7 @@ img { max-width:100%; }
     </details>
     <details class="faq-item">
       <summary>How do you measure the ROI of public relations (PR)? <span class="q-ico"><i class="ico" data-lucide="plus"></i></span></summary>
-      <div class="ans">Measuring PR ROI requires connecting your earned media data directly to your business outcomes or your broader corporate strategy. Instead of relying on arbitrary advertising value equivalents (AVEs), focus on business pipeline metrics, organic website traffic growth, and changes in brand perception scores over time. Tracking your audience's digital touchpoints throughout the buying journey lets you map coverage directly to pipeline revenue. 
+      <div class="ans">Measuring PR ROI requires connecting your earned media data directly to your business outcomes or your broader corporate strategy. Instead of relying on arbitrary advertising value equivalents (AVEs), focus on business pipeline metrics, organic website traffic growth, and changes in brand perception scores over time. Tracking your audience's digital touchpoints throughout the buying journey lets you map coverage directly to pipeline revenue.
 </div>
     </details>
     <details class="faq-item">
@@ -970,18 +974,16 @@ img { max-width:100%; }
     </details>
     <details class="faq-item">
       <summary>How can AI help with PR measurement? <span class="q-ico"><i class="ico" data-lucide="plus"></i></span></summary>
-      <div class="ans">AI-powered analytics <a href="https://signal-ai.com/insights/beyond-boolean-why-fortune-500s-lean-on-ai-powered-search/"> eliminate manual Boolean guesswork</a> by using natural language processing to read unstructured global data for context. While generative AI excels at instantly summarizing complex datasets into C-suite briefs, discriminative AI categorizes entities, maps hidden thematic connections, and accurately isolates sentiment to specific organizations in a single sentence. 
+      <div class="ans">AI-powered analytics <a href="https://signal-ai.com/insights/beyond-boolean-why-fortune-500s-lean-on-ai-powered-search/"> eliminate manual Boolean guesswork</a> by using natural language processing to read unstructured global data for context. While generative AI excels at instantly summarizing complex datasets into C-suite briefs, discriminative AI categorizes entities, maps hidden thematic connections, and accurately isolates sentiment to specific organizations in a single sentence.
 </div>
     </details>
     <details class="faq-item">
       <summary>Media monitoring vs. PR measurement — what's the difference? <span class="q-ico"><i class="ico" data-lucide="plus"></i></span></summary>
       <div class="ans">Media monitoring is a reactive, binary exercise focused on capturing real-time clips, alerts, and keyword mentions across various channels. PR measurement is a proactive branch of  <a href="https://signal-ai.com/guide-to-reputation-management/">reputation management</a> and intelligence. It transforms raw coverage data into structured external intelligence, using advanced data analytics to guide your ongoing narrative planning and corporate storytelling.
-
  </div>
     </details>
   </div>
 </section>
-
 <!-- ============== FOOTER ============== -->
 <footer class="footer" id="company">
   <div class="wrap">
@@ -1007,7 +1009,6 @@ img { max-width:100%; }
     </div>
   </div>
 </footer>
-
 <!-- Lucide icons (CDN) -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
@@ -1019,7 +1020,6 @@ img { max-width:100%; }
     });
   });
 </script>
-
 <!-- Pillar mockup animations: scrolling briefing, building report, citation memo -->
 <script>
 (function(){
@@ -1028,7 +1028,6 @@ img { max-width:100%; }
     var stages = document.querySelectorAll('.pillar-visual.aiq-stage[data-anim]');
     if(!stages.length) return;
     function ease(t){ return t<0.5 ? 2*t*t : -1+(4-2*t)*t; }
-
     function email(stage){
       var doc=stage.querySelector('[data-ebdoc]'), scroll=stage.querySelector('.eb-scroll');
       var marks=doc.querySelectorAll('.hl');
@@ -1048,7 +1047,6 @@ img { max-width:100%; }
       }
       play();
     }
-
     function report(stage){
       var doc=stage.querySelector('[data-rpdoc]'), vp=stage.querySelector('.preport');
       var secs=doc.querySelectorAll('[data-sec]');
@@ -1073,7 +1071,6 @@ img { max-width:100%; }
       }
       play();
     }
-
     function scrollThrough(doc, vp, done){
       var total=Math.max(0, doc.scrollHeight - vp.clientHeight);
       if(total<=2){ setTimeout(done,1200); return; }
@@ -1081,7 +1078,6 @@ img { max-width:100%; }
       function f(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1); doc.style.transform='translateY('+(-total*ease(p))+'px)'; if(p<1) requestAnimationFrame(f); else setTimeout(function(){ doc.style.transform='translateY(0)'; done(); },1300); }
       requestAnimationFrame(f);
     }
-
     function cite(stage){
       var lines=stage.querySelectorAll('[data-ciline]'), rows=stage.querySelectorAll('[data-cirow]');
       var widths=['100%','88%','66%'];
@@ -1096,7 +1092,6 @@ img { max-width:100%; }
       }
       play();
     }
-
     function run(stage){ var k=stage.getAttribute('data-anim'); if(k==='email')email(stage); else if(k==='report')report(stage); else if(k==='cite')cite(stage); }
     var seen=[];
     if('IntersectionObserver' in window){
@@ -1107,7 +1102,6 @@ img { max-width:100%; }
   if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
 })();
 </script>
-
 <!-- Ask AIQ typing chat -->
 <script>
 (function(){
@@ -1165,6 +1159,5 @@ img { max-width:100%; }
   if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
 })();
 </script>
-
 </body>
 </html>
