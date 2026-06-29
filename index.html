@@ -380,6 +380,101 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
 @media (max-width:620px){ .node-disc .node-img { width:28px; height:28px; } }
 .diff-col .ico-wrap:has(.diff-img) { background:var(--pure-white); border:1px solid var(--border); }
 .diff-col .ico-wrap .diff-img { width:34px; height:34px; object-fit:contain; }
+
+/* ============================================================
+   PILLAR MOCKUP ANIMATIONS
+   ============================================================ */
+.aiq-stage::before { content:''; position:absolute; inset:0; background:var(--celestial-gradient); opacity:0; z-index:0; }
+.aiq-stage.in-view::before { animation:aiqGradHL 3.6s ease forwards; }
+@keyframes aiqGradHL { 0%{opacity:0} 14%{opacity:1} 44%{opacity:1} 100%{opacity:0} }
+.aiq-stage .aiq-window { position:relative; z-index:1; box-shadow:0 10px 28px rgba(47,47,47,.10); }
+.aiq-stage.no-grad::before { content:none; }
+.aiq-stage.no-grad.in-view .aiq-window { box-shadow:0 8px 24px rgba(47,47,47,.08); }
+
+/* Ask AIQ chat */
+.aiq-chat { padding:14px !important; gap:10px !important; justify-content:flex-end; }
+.aiq-msgs { flex:1; display:flex; flex-direction:column; gap:9px; overflow:hidden; justify-content:flex-end; }
+.aiq-user { align-self:flex-end; max-width:88%; background:var(--celestial-gradient); color:var(--pure-white); border-radius:14px 14px 4px 14px; padding:9px 12px; font-family:var(--font-display); font-size:11.5px; line-height:1.45; }
+.aiq-typing { display:flex; gap:4px; align-items:center; padding:9px 12px; background:var(--bg-inset); border:1px solid var(--border); border-radius:12px; width:fit-content; }
+.aiq-typing .dot { width:5px; height:5px; border-radius:50%; background:var(--fg-3); animation:aiqBounce 1s ease infinite; }
+.aiq-typing .dot:nth-child(2){ animation-delay:.15s; } .aiq-typing .dot:nth-child(3){ animation-delay:.3s; }
+@keyframes aiqBounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+.aiq-card { background:var(--bg-inset); border:1px solid var(--border); border-radius:12px; padding:11px; }
+.aiq-card .lbl { font-family:var(--font-display); font-size:10px; color:var(--fg-3); margin-bottom:7px; }
+.aiq-card .ttl { font-family:var(--font-display); font-size:11px; font-weight:600; color:var(--warm-black); display:flex; align-items:center; gap:6px; margin-bottom:10px; }
+.aiq-chart { display:flex; align-items:flex-end; gap:2px; height:52px; }
+.aiq-chart i { flex:1; border-radius:2px 2px 0 0; transform:scaleY(0); transform-origin:bottom; transition:transform .5s cubic-bezier(.2,.7,.3,1); display:block; }
+.aiq-chart-x { display:flex; justify-content:space-between; font-family:var(--font-display); font-size:8.5px; color:var(--fg-3); margin-top:6px; }
+.aiq-fb { display:flex; align-items:center; justify-content:space-between; }
+.aiq-fb .btns { display:flex; gap:8px; font-size:12px; }
+.aiq-fb .t { font-family:var(--font-display); font-size:10px; color:var(--fg-3); }
+.aiq-input { border:1px solid var(--border); border-radius:12px; padding:9px 11px; display:flex; flex-direction:column; gap:8px; background:var(--pure-white); transition:border-color .2s,box-shadow .2s; flex-shrink:0; }
+.aiq-input.active { border-color:var(--neptune); box-shadow:0 0 0 3px var(--neptune-10); }
+.aiq-field { font-family:var(--font-display); font-size:11px; color:var(--warm-black); min-height:15px; line-height:1.4; }
+.aiq-input-row { display:flex; align-items:center; justify-content:space-between; }
+.aiq-chips { display:flex; gap:5px; }
+.aiq-chips .c { font-family:var(--font-display); font-size:9px; color:var(--fg-2); background:var(--bg-inset); border-radius:6px; padding:3px 7px; }
+.aiq-send { width:24px; height:24px; border:none; background:none; cursor:default; display:flex; align-items:center; justify-content:center; color:var(--border-strong); transition:color .3s; padding:0; }
+.aiq-send.active { color:var(--neptune); }
+.aiq-cursor { display:inline-block; width:1.5px; height:13px; background:var(--neptune); margin-left:1px; vertical-align:middle; animation:blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity:0; } }
+.aiq-fade { animation:aiqFade .45s ease forwards; }
+@keyframes aiqFade { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)} }
+
+/* Executive briefing email/PDF */
+.ebrief { padding:0 !important; gap:0 !important; }
+.eb-scroll { flex:1; overflow:hidden; position:relative; }
+.eb-doc { position:relative; padding:14px; display:flex; flex-direction:column; gap:11px; will-change:transform; }
+.eb-doc p { font-family:var(--font-display); font-size:11px; line-height:1.7; color:var(--fg-2); margin:0; }
+.eb-doc .hl { background-color:transparent; background-image:linear-gradient(var(--neptune),var(--neptune)); background-repeat:no-repeat; background-size:0% 100%; border-radius:3px; padding:1px 2px; color:inherit; transition:background-size .55s ease,color .55s ease; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.eb-doc .hl.lit { background-size:100% 100%; color:var(--pure-white); }
+.bf-cover { background:var(--warm-black); padding:13px 14px; flex-shrink:0; }
+.bf-kicker { font-family:var(--font-display); font-size:8px; letter-spacing:.14em; font-weight:600; color:rgba(245,244,238,.55); }
+.bf-title { font-family:var(--font-display); font-size:15px; font-weight:700; letter-spacing:-0.01em; color:var(--fog); margin-top:5px; }
+.bf-date { font-family:var(--font-display); font-size:9px; color:rgba(245,244,238,.5); margin-top:4px; }
+.bf-doc { gap:9px !important; }
+.bf-legend { display:flex; gap:13px; align-items:center; padding-bottom:2px; }
+.bf-legend span { display:inline-flex; align-items:center; gap:5px; font-family:var(--font-display); font-size:9px; color:var(--fg-3); }
+.bd { width:7px; height:7px; border-radius:50%; display:inline-block; flex-shrink:0; }
+.bd.g { background:#3FA66A; } .bd.y { background:#F0B429; } .bd.r { background:var(--signal-red); }
+.bf-card { border:1px solid var(--border); border-radius:10px; padding:10px 11px; background:var(--pure-white); }
+.bf-top { display:flex; align-items:center; gap:7px; margin-bottom:5px; }
+.bf-mkt { font-family:var(--font-display); font-size:11.5px; font-weight:700; color:var(--warm-black); }
+.bf-top .bd { margin-left:auto; width:8px; height:8px; }
+.bf-tag { display:inline-block; margin-top:9px; font-family:var(--font-display); font-size:9px; font-weight:500; color:var(--neptune); background:var(--neptune-10); border-radius:6px; padding:3px 8px; }
+.bf-spot { border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.bf-band { background:var(--celestial-gradient); color:var(--fog); font-family:var(--font-display); font-weight:700; font-size:10px; letter-spacing:.04em; padding:9px 11px; }
+.bf-spot p { padding:10px 11px; margin:0 !important; font-family:var(--font-display); font-size:11px; line-height:1.7; color:var(--fg-2); }
+
+/* Reputation report */
+.preport { padding:0 !important; gap:0 !important; overflow:hidden; }
+.rp-doc { position:relative; padding:16px; display:flex; flex-direction:column; gap:13px; will-change:transform; }
+.rp-sec { opacity:0; transform:translateY(10px); transition:opacity .5s ease,transform .5s ease; }
+.rp-sec.show { opacity:1; transform:none; }
+.rp-title { font-family:var(--font-display); font-size:16px; font-weight:700; color:var(--warm-black); }
+.rp-sub { font-family:var(--font-display); font-size:10px; color:var(--fg-3); margin-top:3px; }
+.rp-h { font-family:var(--font-display); font-size:11px; font-weight:600; color:var(--warm-black); margin-bottom:9px; }
+.rp-tiles { display:flex; gap:8px; }
+.rp-tile { flex:1; background:var(--bg-inset); border:1px solid var(--border); border-radius:10px; padding:10px; }
+.rp-tile .v { font-family:var(--font-display); font-size:18px; font-weight:700; color:var(--warm-black); letter-spacing:-0.02em; }
+.rp-tile .k { font-family:var(--font-display); font-size:8.5px; color:var(--fg-3); margin-top:3px; }
+.rp-chart { display:flex; align-items:flex-end; gap:3px; height:54px; }
+.rp-chart i { flex:1; border-radius:2px 2px 0 0; background:var(--neptune); transform:scaleY(0); transform-origin:bottom; transition:transform .5s cubic-bezier(.2,.7,.3,1); display:block; }
+.rp-line { height:7px; border-radius:4px; background:var(--bg-inset); margin-bottom:6px; }
+.rp-line.s { width:82%; } .rp-line.t { width:60%; }
+
+/* Memo citations */
+.pcite { gap:12px !important; }
+.ci-answer { background:var(--bg-inset); border:1px solid var(--border); border-radius:11px; padding:12px; }
+.ci-head { font-family:var(--font-display); font-size:11px; font-weight:600; color:var(--neptune); display:flex; align-items:center; gap:6px; margin-bottom:10px; }
+.ci-head .ico { width:14px; height:14px; }
+.ci-line { height:7px; border-radius:4px; background:var(--border); margin-bottom:7px; transition:width .55s ease; }
+.ci-list { display:flex; flex-direction:column; gap:8px; }
+.ci-row { display:flex; align-items:center; gap:9px; padding:8px 10px; border:1px solid var(--border); border-radius:10px; background:var(--pure-white); opacity:0; transform:translateY(8px); transition:opacity .45s ease,transform .45s ease; }
+.ci-row.show { opacity:1; transform:none; }
+.ci-row .badge { width:18px; height:18px; flex-shrink:0; border-radius:50%; background:var(--celestial-gradient); color:var(--pure-white); font-family:var(--font-display); font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.ci-row .src { font-family:var(--font-display); font-size:11px; color:var(--warm-black); flex:1; }
+.ci-row .tag { font-family:var(--font-display); font-size:9px; color:var(--seafoam); font-weight:600; background:var(--seafoam-10); border-radius:6px; padding:2px 7px; }
 </style>
 </head>
 <body>
@@ -553,10 +648,21 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
       <h3>Present media metrics with confidence</h3>
       <p>The credibility of a PR measurement report depends entirely on the data underlying it. Signal AI's entity and concept-based search, AIQ Search, captures coverage accurately and completely — without the noise that inflates volume metrics or the gaps that leave key coverage uncounted. Configurable Sentiment, Topic Analysis, Salience, and Readership Data combine to present data that reflects reality.</p>
     </div>
-    <div class="pillar-visual"><div class="pv-window">
-      <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Ask AIQ</span></div>
-      <div class="pv-body"><div class="pv-doc"><div class="lineh"></div><div class="line"></div><div class="line s"></div><div class="line t"></div></div></div>
-    </div></div>
+    <div class="pillar-visual aiq-stage">
+      <div class="pv-window aiq-window">
+        <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Ask AIQ</span></div>
+        <div class="pv-body aiq-chat">
+          <div class="aiq-msgs" id="aiqMsgs"></div>
+          <div class="aiq-input" id="aiqInput">
+            <div class="aiq-field" id="aiqField"><span class="aiq-cursor"></span></div>
+            <div class="aiq-input-row">
+              <div class="aiq-chips"><span class="c">Flexible research</span><span class="c">Default content set</span></div>
+              <button class="aiq-send" id="aiqSend" aria-label="Send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="pillar flip">
@@ -565,10 +671,22 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
       <h3>Connect PR activity to real business outcomes</h3>
       <p>Reputation is a financial asset, and should be reported as such. Executives don't want methodology; they want narrative and numbers they can defend. Signal AI's reporting combines the reliability of AI-powered data with the expertise of industry analysts.</p>
     </div>
-    <div class="pillar-visual"><div class="pv-window">
-      <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Executive briefing</span></div>
-      <div class="pv-body"><div class="pv-doc"><div class="lineh"></div><div class="line"></div><div class="line s"></div><div class="line"></div><div class="line t"></div></div></div>
-    </div></div>
+    <div class="pillar-visual aiq-stage no-grad" data-anim="email">
+      <div class="pv-window aiq-window">
+        <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Executive briefing</span></div>
+        <div class="pv-body ebrief">
+          <div class="bf-cover"><div class="bf-kicker">SIGNAL AI &#183; AT A GLANCE</div><div class="bf-title">Reputation Weekly Briefing</div><div class="bf-date">Board edition &#183; 06/10</div></div>
+          <div class="eb-scroll"><div class="eb-doc bf-doc" data-ebdoc>
+            <div class="bf-legend"><span><i class="bd g"></i>Improving</span><span><i class="bd y"></i>Watch</span><span><i class="bd r"></i>Risk</span></div>
+            <div class="bf-card"><div class="bf-top"><span class="bf-mkt">United Kingdom</span><i class="bd g"></i></div><p>Reputation Score up <mark class="hl">+12 points</mark> after net-zero coverage.</p><span class="bf-tag">Reputation Score</span></div>
+            <div class="bf-card"><div class="bf-top"><span class="bf-mkt">Germany</span><i class="bd y"></i></div><p>Share of Voice slipped to <mark class="hl">#3</mark> amid EV-policy debate.</p><span class="bf-tag">Share of Voice</span></div>
+            <div class="bf-card"><div class="bf-top"><span class="bf-mkt">France</span><i class="bd r"></i></div><p>Negative sentiment spiked <mark class="hl">+9%</mark> on a pricing story.</p><span class="bf-tag">Sentiment risk</span></div>
+            <div class="bf-card"><div class="bf-top"><span class="bf-mkt">Spain</span><i class="bd g"></i></div><p>Earned media reach <mark class="hl">+38%</mark> on a product launch.</p><span class="bf-tag">Media reach</span></div>
+            <div class="bf-spot"><div class="bf-band">SPOTLIGHT: UNITED KINGDOM</div><p>Tier-one outlets cited the brand <mark class="hl">2.1&#215; more</mark> than peers, driving the quarter's gains.</p></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="pillar">
@@ -577,10 +695,18 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
       <h3>Track reputation scoring and media impact over time</h3>
       <p>Signal AI's analyst-led methodologies — such as our proprietary Reputation and Media Impact Scores — provide a single, credible metric to track over time and benchmark against competitors. Show exactly how coverage quality and brand perception are impacting the business, and what's driving the change.</p>
     </div>
-    <div class="pillar-visual"><div class="pv-window">
-      <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Reputation Report &#183; Q2</span></div>
-      <div class="pv-body"><div class="pv-doc"><div class="lineh"></div><div class="line"></div><div class="line s"></div><div class="line t"></div></div></div>
-    </div></div>
+    <div class="pillar-visual aiq-stage no-grad" data-anim="report">
+      <div class="pv-window aiq-window">
+        <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Reputation Report &#183; Q2</span></div>
+        <div class="pv-body preport"><div class="rp-doc" data-rpdoc>
+          <div class="rp-sec" data-sec><div class="rp-title">Reputation Report</div><div class="rp-sub">Q2 2026 &#183; vs. peer set</div></div>
+          <div class="rp-sec" data-sec><div class="rp-tiles"><div class="rp-tile"><div class="v">82</div><div class="k">Reputation Score</div></div><div class="rp-tile"><div class="v">+6.1</div><div class="k">vs. last quarter</div></div><div class="rp-tile"><div class="v">#2</div><div class="k">Share of Voice</div></div></div></div>
+          <div class="rp-sec" data-sec><div class="rp-h">Media Impact &mdash; trend</div><div class="rp-chart" data-rpchart><i style="height:38%"></i><i style="height:50%"></i><i style="height:44%"></i><i style="height:62%"></i><i style="height:56%"></i><i style="height:74%"></i><i style="height:88%"></i><i style="height:100%"></i></div></div>
+          <div class="rp-sec" data-sec><div class="rp-h">Summary</div><div class="rp-line"></div><div class="rp-line s"></div><div class="rp-line t"></div></div>
+          <div class="rp-sec" data-sec><div class="rp-h">Competitive benchmark</div><div class="rp-line s"></div><div class="rp-line"></div></div>
+        </div></div>
+      </div>
+    </div>
   </div>
 
   <div class="pillar flip">
@@ -589,10 +715,15 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
       <h3>Measure what competitors miss</h3>
       <p>As AI search grows, brands are being referenced or ignored based on their earned media footprint. Signal AI shows exactly how your brand appears in AI-generated answers — a view of reputation and LLM visibility in AI-driven search that no other enterprise tool currently offers.</p>
     </div>
-    <div class="pillar-visual"><div class="pv-window">
-      <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Memo &mdash; AI Citations</span></div>
-      <div class="pv-body"><div class="pv-doc"><div class="lineh"></div><div class="line"></div><div class="line s"></div><div class="line t"></div></div></div>
-    </div></div>
+    <div class="pillar-visual aiq-stage no-grad" data-anim="cite">
+      <div class="pv-window aiq-window">
+        <div class="pv-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="ttl">Memo &mdash; AI Citations</span></div>
+        <div class="pv-body pcite">
+          <div class="ci-answer"><div class="ci-head"><i class="ico" data-lucide="sparkles"></i> AI-generated answer</div><div class="ci-line" data-ciline style="width:0"></div><div class="ci-line s" data-ciline style="width:0"></div><div class="ci-line t" data-ciline style="width:0"></div></div>
+          <div class="ci-list" data-cilist><div class="ci-row" data-cirow><span class="badge">1</span><span class="src">Reuters &#183; earned coverage</span><span class="tag">Cited</span></div><div class="ci-row" data-cirow><span class="badge">2</span><span class="src">Financial Times &#183; interview</span><span class="tag">Cited</span></div><div class="ci-row" data-cirow><span class="badge">3</span><span class="src">Industry report &#183; 2026</span><span class="tag">Cited</span></div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -812,6 +943,152 @@ a { color:var(--link); text-decoration:none; transition:color var(--dur-fast) va
       if (d.open) document.querySelectorAll('.faq-item[open]').forEach(function(o){ if(o!==d) o.open=false; });
     });
   });
+</script>
+
+<!-- Pillar mockup animations: scrolling briefing, building report, citation memo -->
+<script>
+(function(){
+  function init(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var stages = document.querySelectorAll('.pillar-visual.aiq-stage[data-anim]');
+    if(!stages.length) return;
+    function ease(t){ return t<0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+    function email(stage){
+      var doc=stage.querySelector('[data-ebdoc]'), scroll=stage.querySelector('.eb-scroll');
+      var marks=doc.querySelectorAll('.hl');
+      function play(){
+        doc.style.transform='translateY(0)';
+        for(var k=0;k<marks.length;k++) marks[k].classList.remove('lit');
+        var total=Math.max(0, doc.scrollHeight - scroll.clientHeight);
+        if(reduce){ for(var k=0;k<marks.length;k++) marks[k].classList.add('lit'); return; }
+        var dur=6800, start=null;
+        function frame(ts){
+          if(!start) start=ts; var p=Math.min((ts-start)/dur,1); var y=total*ease(p);
+          doc.style.transform='translateY('+(-y)+'px)';
+          for(var k=0;k<marks.length;k++){ if(marks[k].offsetTop - y < scroll.clientHeight*0.6) marks[k].classList.add('lit'); }
+          if(p<1) requestAnimationFrame(frame); else setTimeout(function(){ setTimeout(play,1900); },1500);
+        }
+        requestAnimationFrame(frame);
+      }
+      play();
+    }
+
+    function report(stage){
+      var doc=stage.querySelector('[data-rpdoc]'), vp=stage.querySelector('.preport');
+      var secs=doc.querySelectorAll('[data-sec]');
+      function play(){
+        doc.style.transform='translateY(0)';
+        for(var k=0;k<secs.length;k++){ secs[k].classList.remove('show'); }
+        var bars=doc.querySelectorAll('[data-rpchart] i');
+        for(var b=0;b<bars.length;b++){ bars[b].style.transform='scaleY(0)'; }
+        if(reduce){ for(var k=0;k<secs.length;k++) secs[k].classList.add('show'); for(var b=0;b<bars.length;b++) bars[b].style.transform='scaleY(1)'; return; }
+        var i=0;
+        function step(){
+          if(i<secs.length){
+            secs[i].classList.add('show');
+            var cb=secs[i].querySelectorAll('[data-rpchart] i');
+            if(cb.length){ (function(list){ for(var k=0;k<list.length;k++){ list[k].style.transitionDelay=(k*0.05)+'s'; } setTimeout(function(){ for(var k=0;k<list.length;k++) list[k].style.transform='scaleY(1)'; },140); })(cb); }
+            i++; setTimeout(step,780);
+          } else {
+            setTimeout(function(){ scrollThrough(doc, vp, function(){ setTimeout(play,1300); }); },900);
+          }
+        }
+        step();
+      }
+      play();
+    }
+
+    function scrollThrough(doc, vp, done){
+      var total=Math.max(0, doc.scrollHeight - vp.clientHeight);
+      if(total<=2){ setTimeout(done,1200); return; }
+      var dur=2800, start=null;
+      function f(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1); doc.style.transform='translateY('+(-total*ease(p))+'px)'; if(p<1) requestAnimationFrame(f); else setTimeout(function(){ doc.style.transform='translateY(0)'; done(); },1300); }
+      requestAnimationFrame(f);
+    }
+
+    function cite(stage){
+      var lines=stage.querySelectorAll('[data-ciline]'), rows=stage.querySelectorAll('[data-cirow]');
+      var widths=['100%','88%','66%'];
+      function play(){
+        for(var k=0;k<lines.length;k++) lines[k].style.width='0';
+        for(var r=0;r<rows.length;r++) rows[r].classList.remove('show');
+        if(reduce){ for(var k=0;k<lines.length;k++) lines[k].style.width=widths[k]||'100%'; for(var r=0;r<rows.length;r++) rows[r].classList.add('show'); return; }
+        var t=450;
+        lines.forEach(function(l,k){ setTimeout(function(){ l.style.width=widths[k]||'100%'; }, t); t+=480; });
+        rows.forEach(function(rw){ setTimeout(function(){ rw.classList.add('show'); }, t); t+=520; });
+        setTimeout(play, t+2300);
+      }
+      play();
+    }
+
+    function run(stage){ var k=stage.getAttribute('data-anim'); if(k==='email')email(stage); else if(k==='report')report(stage); else if(k==='cite')cite(stage); }
+    var seen=[];
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); if(seen.indexOf(e.target)<0){ seen.push(e.target); run(e.target); } } }); }, {threshold:0.3});
+      for(var s=0;s<stages.length;s++) io.observe(stages[s]);
+    } else { for(var s=0;s<stages.length;s++){ stages[s].classList.add('in-view'); run(stages[s]); } }
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+
+<!-- Ask AIQ typing chat -->
+<script>
+(function(){
+  function init(){
+    var Q = "Analyze volume trends for Artificial Intelligence over the last 10 months.";
+    var field=document.getElementById('aiqField'), box=document.getElementById('aiqInput'),
+        msgs=document.getElementById('aiqMsgs'), send=document.getElementById('aiqSend'),
+        stage=document.querySelector('.aiq-stage');
+    if(!field||!box||!msgs||!send||!stage) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var i=0, timer=null, started=false;
+    var bars=[35,42,38,46,52,58,64,72,100,90,84,95,66,56,50,46,42,48];
+    function col(h){ return h>=80?'#6446FF':h>=58?'#8A6FF5':'#B9ABFF'; }
+    function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+    function chartHTML(){
+      return '<div class="aiq-card aiq-fade"><div class="lbl">Here is your analysis</div>'+
+        '<div class="ttl"><span>📊</span> AI Volume Trends — Last 10 Months</div>'+
+        '<div class="aiq-chart">'+bars.map(function(h){return '<i style="height:'+h+'%;background:'+col(h)+'"></i>';}).join('')+'</div>'+
+        '<div class="aiq-chart-x"><span>Aug 25</span><span>Dec 25</span><span>Apr 26</span></div></div>';
+    }
+    function growBars(){ var ic=msgs.querySelectorAll('.aiq-chart i'); for(var k=0;k<ic.length;k++){ ic[k].style.transitionDelay=(k*0.03)+'s'; ic[k].style.transform='scaleY(1)'; } }
+    function type(){
+      if(i<Q.length){ field.innerHTML=esc(Q.slice(0,i+1))+'<span class="aiq-cursor"></span>'; if(i===0) box.classList.add('active'); i++; timer=setTimeout(type,34+Math.random()*28); }
+      else { send.classList.add('active'); timer=setTimeout(sendMsg,650); }
+    }
+    function sendMsg(){
+      field.innerHTML='<span class="aiq-cursor"></span>'; i=0; box.classList.remove('active'); send.classList.remove('active');
+      var b=document.createElement('div'); b.className='aiq-user aiq-fade'; b.textContent=Q; msgs.appendChild(b);
+      timer=setTimeout(typing,350);
+    }
+    function typing(){
+      var ti=document.createElement('div'); ti.className='aiq-typing aiq-fade';
+      ti.innerHTML='<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+      msgs.appendChild(ti);
+      timer=setTimeout(function(){ ti.remove(); respond(); },1700);
+    }
+    function respond(){
+      var c=document.createElement('div'); c.innerHTML=chartHTML(); msgs.appendChild(c.firstChild);
+      var fb=document.createElement('div'); fb.className='aiq-fb aiq-fade'; fb.innerHTML='<div class="btns">👎 👍</div><div class="t">1m 5s</div>'; msgs.appendChild(fb);
+      setTimeout(growBars,90);
+      timer=setTimeout(loop,4300);
+    }
+    function loop(){ msgs.innerHTML=''; i=0; timer=setTimeout(type,950); }
+    function staticState(){
+      var b=document.createElement('div'); b.className='aiq-user'; b.textContent=Q; msgs.appendChild(b);
+      var c=document.createElement('div'); c.innerHTML=chartHTML(); msgs.appendChild(c.firstChild);
+      setTimeout(growBars,90);
+    }
+    function start(){ if(started) return; started=true; if(reduce){ staticState(); } else { timer=setTimeout(type,700); } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ stage.classList.add('in-view'); start(); } }); }, {threshold:0.35});
+      io.observe(stage);
+    } else { stage.classList.add('in-view'); start(); }
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
+})();
 </script>
 
 </body>
